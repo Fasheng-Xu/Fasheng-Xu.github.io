@@ -181,12 +181,16 @@
   .btn--primary:hover{background:var(--accent-ink)}
   .btn svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.7}
 
-  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:52px;
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr));gap:1px;margin-top:52px;
     background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
   .stat{background:var(--paper);padding:18px 20px}
   .stat .n{font-family:var(--serif);font-size:clamp(26px,3.4vw,34px);font-weight:600;letter-spacing:-.02em;line-height:1;color:var(--accent-ink)}
   .stat .l{margin-top:9px;font-size:12.5px;color:var(--ink-soft);line-height:1.35}
-  @media (max-width:680px){.stats{grid-template-columns:repeat(2,1fr)}}
+  a.stat--link{text-decoration:none;transition:background .18s}
+  a.stat--link:hover{background:var(--panel-2)}
+  .stat--book .n{font-size:clamp(19px,2.4vw,25px);line-height:1.08}
+  .stat--book .n em{font-size:1em}
+  
 
   /* ============================ SECTIONS ============================ */
   section{padding:clamp(54px,8vw,88px) 0;border-top:1px solid var(--line)}
@@ -301,6 +305,8 @@
   .awards{display:grid;grid-template-columns:1.15fr 1fr;gap:44px}
   @media (max-width:800px){.awards{grid-template-columns:1fr;gap:34px}}
   .award-feature{background:var(--panel);border:1px solid var(--line-strong);border-top:2px solid var(--accent);padding:26px 26px 24px;position:relative}
+  .award-feature h3 a{color:inherit;text-decoration:none}
+  .award-feature h3 a:hover{color:var(--accent-ink);text-decoration:underline;text-underline-offset:3px}
   .award-feature .yr{font-family:var(--mono);font-size:12px;color:var(--accent-ink);letter-spacing:.05em}
   .award-feature h3{font-size:23px;margin:10px 0 8px;letter-spacing:-.01em}
   .award-feature p{color:var(--ink-soft);font-size:14.5px}
@@ -355,11 +361,11 @@
   <div class="wrap nav__row">
     <a class="brand" href="#top"><span class="dot" aria-hidden="true"></span>Fasheng Xu</a>
     <nav class="links" aria-label="Primary">
+      <a href="#about">About</a>
       <a href="#research" class="persist">Research</a>
       <a href="#genai">GenAI Book</a>
       <a href="#recognition">Recognition</a>
       <a href="#teaching">Teaching</a>
-      <a href="#about">About</a>
       <a class="cv persist" id="cvTop" download="Fasheng-Xu-CV.pdf" href="#"><span class="lbl-full">Download CV</span><span class="lbl-min">CV</span></a>
       <button class="theme-btn persist" id="themeBtn" type="button" aria-label="Toggle color theme" title="Toggle theme">◑</button>
     </nav>
@@ -392,7 +398,8 @@
         </a>
       </div>
       <div class="stats" role="list" aria-label="Highlights">
-        <div class="stat" role="listitem"><div class="n mono">9</div><div class="l">Journal publications</div></div>
+        <a class="stat stat--link stat--book" href="#genai" role="listitem"><div class="n"><em>The Owner</em></div><div class="l">New book on work in the GenAI era</div></a>
+        <a class="stat stat--link" href="https://scholar.google.com/citations?user=NQZrNUcAAAAJ&amp;hl=en" target="_blank" rel="noopener" role="listitem"><div class="n mono">1,291</div><div class="l">Google Scholar citations</div></a>
         <div class="stat" role="listitem"><div class="n mono">7</div><div class="l">in <i>Management Science</i> &amp; M&amp;SOM</div></div>
         <div class="stat" role="listitem"><div class="n mono">25<span style="font-size:.6em">+</span></div><div class="l">Working &amp; under-review papers</div></div>
         <div class="stat" role="listitem"><div class="n mono">2025</div><div class="l">POMS Early Career Research Award</div></div>
@@ -400,12 +407,35 @@
     </div>
   </section>
 
+  <!-- ================= ABOUT ================= -->
+  <section id="about">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div class="k">
+          <div class="eyebrow"><span class="sec-num">01 / </span>About</div>
+          <h2>Background &amp; contact</h2>
+        </div>
+      </div>
+      <div class="grid2 reveal" style="grid-template-columns:minmax(0,720px)">
+        <div class="bio">
+          <p>Fasheng Xu is an Associate Professor of Operations and Information Management at School of Business, University of Connecticut (UConn). Fasheng’s general research interests lie in the interface of operations, finance, and economics, with a particular focus on the economic and social implications of emerging technologies. His current research examines how Generative AI reshapes organizational structure and market dynamics, the rise of the agentic economy, the governance and optimization of agentic systems, and the economics and financing of AI supply chains.</p>
+          <p>His work has been published in top-tier academic journals such as <em>Management Science</em> and <em>M&amp;SOM</em>, and he has received multiple best paper nominations along with prestigious research awards, including the 2025 Chelliah Sriskandarajah Early Career Research Accomplishments Award. At UConn, Fasheng designed and launched a new MBA course on Supply Chain Finance. He also recently co-authored a book, <em>The Owner: A Business Novel about Work in the GenAI Era</em>, which translates these research themes into narrative form for broader audiences.</p>
+          <ul class="facts">
+            <li><span class="fk">Position</span><span class="fv"><b>Associate Professor (with Tenure), OPIM</b> <span>· UConn School of Business, 2026 –</span><br>Assistant Professor, OPIM <span>· UConn School of Business, 2023 – 2026</span></span></li>
+            <li><span class="fk">Previously</span><span class="fv">Assistant Professor of SCM <span>· Syracuse (Whitman), 2019 – 2023</span></span></li>
+            <li><span class="fk">Ph.D.</span><span class="fv">Operations Management <span>· Olin Business School, WashU, 2019</span></span></li>
+            <li><span class="fk">B.S.</span><span class="fv">Industrial Engineering <span>· Shanghai Jiao Tong University, 2013</span></span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- ================= RESEARCH ================= -->
   <section id="research" style="padding-top:clamp(40px,6vw,64px)">
     <div class="wrap">
       <div class="sec-head reveal">
         <div class="k">
-          <div class="eyebrow"><span class="sec-num">01 / </span>Research</div>
+          <div class="eyebrow"><span class="sec-num">02 / </span>Research</div>
           <h2>Papers, grouped by theme</h2>
           <p>My work sits at the interface of operations, finance, and emerging technology. Filter by topic or search by title, coauthor, or journal. Many papers span more than one theme.</p>
         </div>
@@ -434,7 +464,7 @@
     <div class="wrap">
       <div class="sec-head reveal">
         <div class="k">
-          <div class="eyebrow"><span class="sec-num">02 / </span>Generative AI</div>
+          <div class="eyebrow"><span class="sec-num">03 / </span>Generative AI</div>
           <h2>Working at the AI frontier</h2>
           <p>Generative AI runs through much of my current research — the economics of foundation models, AI agents and agentic commerce, and how GenAI is reshaping organizations and the future of work. It is also the subject of my first book.</p>
         </div>
@@ -477,7 +507,7 @@
     <div class="wrap">
       <div class="sec-head reveal">
         <div class="k">
-          <div class="eyebrow"><span class="sec-num">03 / </span>Recognition</div>
+          <div class="eyebrow"><span class="sec-num">04 / </span>Recognition</div>
           <h2>Honors &amp; awards</h2>
           <p>Selected recognition for research and service across the operations, information systems, and management-science communities.</p>
         </div>
@@ -485,8 +515,8 @@
       <div class="awards reveal">
         <div class="award-feature">
           <div class="yr">2025 · Production and Operations Management Society</div>
-          <h3>Chelliah Sriskandarajah Early Career Research Accomplishments Award</h3>
-          <p>POMS's principal early-career honor, recognizing outstanding research contributions within the first several years of an academic career.</p>
+          <h3><a href="https://www.poms.org/pomsocietyawards/earlycareerresearchaward" target="_blank" rel="noopener">Chelliah Sriskandarajah Early Career Research Accomplishments Award</a></h3>
+          <p>The most prestigious early-career research award in the operations management community, presented annually to a single early-career scholar worldwide in recognition of exceptional research accomplishments and scholarly impact.</p>
         </div>
         <ul class="alist">
           <li><span class="ay">2026</span><span class="at">M&amp;SOM Meritorious Service Award</span></li>
@@ -506,7 +536,7 @@
     <div class="wrap">
       <div class="sec-head reveal">
         <div class="k">
-          <div class="eyebrow"><span class="sec-num">04 / </span>Teaching</div>
+          <div class="eyebrow"><span class="sec-num">05 / </span>Teaching</div>
           <h2>In the classroom</h2>
           <p>Bringing frontier technology into the business curriculum — from generative AI and blockchain to supply chain finance and analytics.</p>
         </div>
@@ -535,49 +565,6 @@
     </div>
   </section>
 
-  <!-- ================= ABOUT ================= -->
-  <section id="about">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <div class="k">
-          <div class="eyebrow"><span class="sec-num">05 / </span>About</div>
-          <h2>Background &amp; contact</h2>
-        </div>
-      </div>
-      <div class="grid2 reveal">
-        <div class="bio">
-          <p>Fasheng Xu is an Associate Professor of Operations and Information Management at School of Business, University of Connecticut (UConn). Fasheng’s general research interests lie in the interface of operations, finance, and economics, with a particular focus on the economic and social implications of emerging technologies. His current research examines how Generative AI reshapes organizational structure and market dynamics, the rise of the agentic economy, the governance and optimization of agentic systems, and the economics and financing of AI supply chains.</p>
-          <p>His work has been published in top-tier academic journals such as <em>Management Science</em> and <em>M&amp;SOM</em>, and he has received multiple best paper nominations along with prestigious research awards, including the 2025 Chelliah Sriskandarajah Early Career Research Accomplishments Award. At UConn, Fasheng designed and launched a new MBA course on Supply Chain Finance. He also recently co-authored a book, <em>The Owner: A Business Novel about Work in the GenAI Era</em>, which translates these research themes into narrative form for broader audiences.</p>
-          <ul class="facts">
-            <li><span class="fk">Position</span><span class="fv"><b>Associate Professor (with Tenure), OPIM</b> <span>· UConn School of Business, 2026 –</span><br>Assistant Professor, OPIM <span>· UConn School of Business, 2023 – 2026</span></span></li>
-            <li><span class="fk">Previously</span><span class="fv">Assistant Professor of SCM <span>· Syracuse (Whitman), 2019 – 2023</span></span></li>
-            <li><span class="fk">Ph.D.</span><span class="fv">Operations Management <span>· Olin Business School, WashU, 2019</span></span></li>
-            <li><span class="fk">B.S.</span><span class="fv">Industrial Engineering <span>· Shanghai Jiao Tong University, 2013</span></span></li>
-          </ul>
-        </div>
-        <div>
-          <div class="eyebrow" style="margin-bottom:16px">Get in touch</div>
-          <ul class="facts" style="margin-top:0">
-            <li><span class="fk">Office</span><span class="fv">UConn Stamford <span>· 1 University Place, Stamford, CT 06901</span></span></li>
-            <li><span class="fk">Web</span><span class="fv"><a href="https://fasheng-xu.github.io" style="color:var(--accent-ink);text-decoration:none">fasheng-xu.github.io</a> <span>· <a href="https://www.business.uconn.edu/person/fasheng-xu/" target="_blank" rel="noopener" style="color:var(--accent-ink);text-decoration:none">UConn profile</a></span></span></li>
-            <li><span class="fk">Profiles</span><span class="fv"><a href="https://scholar.google.com/citations?user=NQZrNUcAAAAJ&amp;hl=en" target="_blank" rel="noopener" style="color:var(--accent-ink);text-decoration:none">Google Scholar</a> <span>·</span> <a href="https://www.linkedin.com/in/fasheng-xu-90b27a38/" target="_blank" rel="noopener" style="color:var(--accent-ink);text-decoration:none">LinkedIn</a> <span>·</span> <a href="https://www.researchgate.net/profile/Fasheng-Xu" target="_blank" rel="noopener" style="color:var(--accent-ink);text-decoration:none">ResearchGate</a></span></li>
-          </ul>
-          <div class="eyebrow" style="margin:28px 0 14px">Research areas</div>
-          <div class="ptags" id="aboutTopics"></div>
-          <div class="contact-links">
-            <a class="btn" id="cvAbout" download="Fasheng-Xu-CV.pdf" href="#">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
-              Download full CV
-            </a>
-            <a class="btn" href="mailto:fasheng.xu@uconn.edu">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v12H3z"/><path d="M3 7l9 6 9-6"/></svg>
-              Email me
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 </main>
 
 <footer>
@@ -610,7 +597,6 @@ const GROUPS = [
   {key:"published", label:"Journal Publications"},
   {key:"review",    label:"Under Review & Revision"},
   {key:"working",   label:"Selected Working Papers"},
-  {key:"other",     label:"Books & Book Chapters"},
 ];
 
 const PAPERS = [
@@ -656,10 +642,6 @@ const PAPERS = [
    authors:[["Panos Kouvelis"]],
    url:"https://doi.org/10.1287/mnsc.2020.3788",
    notes:[{t:"Finalist, 2022 MSOM iFORM SIG Best Paper Award Competition"}]},
-  {g:"published",y:2014,venue:"Int'l Journal of Production Research",topics:["sustain"],
-   title:"Development of a Multi-scale Model for Customer Perceived Value of Electric Vehicles",
-   authors:[["Rui Miao"],["Kai Zhang"],["Zhibin Jiang"]],
-   url:"https://www.tandfonline.com/doi/abs/10.1080/00207543.2014.890757"},
 
   // ---------- Under review & revision ----------
   {g:"review",y:2026,venue:"Management Science",flag:1,status:["rev","Major Revision"],topics:["genai"],
@@ -686,7 +668,7 @@ const PAPERS = [
    url:"https://ssrn.com/abstract=5110729",
    authors:[["Yangguang Wang"],["Zhengping Wu"]],
    notes:[{t:"Accepted for 2025 MSOM iFORM SIG Conference"}]},
-  {g:"review",y:2026,venue:"Management Science",flag:1,status:["und","Under Review"],topics:["scf","sustain"],
+  {g:"review",y:2026,venue:"Management Science",flag:1,status:["rev","Major Revision"],topics:["scf","sustain"],
    title:"The Promise and Perils of Sustainable Supply Chain Finance",
    url:"https://ssrn.com/abstract=6078626",
    authors:[["Lingxiu Dong"],["Xiaoyu Wang"],["Lei Ye"]],
@@ -705,7 +687,7 @@ const PAPERS = [
    url:"https://ssrn.com/abstract=5666390",
    authors:[["Jianwei Liu"],["Karen Xie"],["Wei Chen"],["Xianneng Li"]]},
   {g:"review",y:2026,venue:"Information Systems Research",flag:1,status:["und","Under Review"],topics:["genai"],
-   title:"Optimizing Prompts for Large Language Models: A Causal Approach",
+   title:"Governing the Instruction Layer of Generative AI Systems: A Causal Optimization Framework",
    url:"https://ssrn.com/abstract=6073587",
    authors:[["Wei Chen"],["Shuran Fu"],["Yanbin Fang"],["Xuan Wei"]]},
   {g:"review",y:2026,venue:"M&SOM",flag:1,status:["und","Under Review"],topics:["blockchain","platforms"],
@@ -771,24 +753,6 @@ const PAPERS = [
    authors:[["Xiaomeng Guo"],["Guang Xiao"],["Fuqiang Zhang"]],
    notes:[{t:"Accepted for 2019 MSOM iFORM SIG Conference"}]},
 
-  // ---------- Books & book chapters ----------
-  {g:"other",y:2026,venue:"Book",topics:["genai"],
-   title:"The Owner: A Business Novel about Work in the GenAI Era",
-   authors:[["Wei Chen"]],
-   url:"https://a.co/d/01bt1DHT",
-   notes:[{t:"Available in Kindle, paperback, and audiobook editions"}]},
-  {g:"other",y:2024,venue:"Found. & Trends TIOM",topics:["scf"],
-   title:"Empowering Economic Growth: Government Loans for Supply Chains in Emerging Markets",
-   authors:[["Jing Hou"]],
-   notes:[{t:"Book chapter · Foundations and Trends in Technology, Information and Operations Management"}]},
-  {g:"other",y:2023,venue:"Found. & Trends TIOM",topics:["blockchain","scf"],
-   title:"Blockchain-Based Digital Payment Obligations for Trade Finance",
-   authors:[["Jing Hou"],["Burak Kazaz"]],
-   notes:[{t:"Book chapter · Foundations and Trends in Technology, Information and Operations Management"}]},
-  {g:"other",y:2022,venue:"Found. & Trends TIOM",topics:["platforms"],
-   title:"Crowdfunding Adoption in the Presence of Word-of-Mouth Communication",
-   authors:[["Xiaomeng Guo"],["Guang Xiao"],["Fuqiang Zhang"]],
-   notes:[{t:"Book chapter · Foundations and Trends in Technology, Information and Operations Management"}]},
 ];
 
 /* =================== RENDER =================== */
@@ -854,7 +818,7 @@ function buildFilters(){
   });
   // about-section topic legend
   const at = document.getElementById("aboutTopics");
-  at.innerHTML = TOPICS.map(t=>`<button class="ptag" data-topic="${t.key}" style="--tc:var(${t.v})" type="button"><span class="cdot"></span>${esc(t.label)} <span style="color:var(--ink-faint)">${counts[t.key]}</span></button>`).join("");
+  if(at) at.innerHTML = TOPICS.map(t=>`<button class="ptag" data-topic="${t.key}" style="--tc:var(${t.v})" type="button"><span class="cdot"></span>${esc(t.label)} <span style="color:var(--ink-faint)">${counts[t.key]}</span></button>`).join("");
 }
 function setTopic(key){
   state.topic = key;
@@ -933,7 +897,8 @@ document.getElementById("emptyReset").addEventListener("click", window.__resetFi
 document.getElementById("papers").addEventListener("click", e=>{
   const b = e.target.closest(".ptag"); if(!b) return; setTopic(b.dataset.topic);
 });
-document.getElementById("aboutTopics").addEventListener("click", e=>{
+const _aboutTopics = document.getElementById("aboutTopics");
+if(_aboutTopics) _aboutTopics.addEventListener("click", e=>{
   const b = e.target.closest(".ptag"); if(!b) return; setTopic(b.dataset.topic);
 });
 
