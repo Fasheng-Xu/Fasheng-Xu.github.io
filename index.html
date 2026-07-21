@@ -433,9 +433,9 @@
           <p>Fasheng Xu is an Associate Professor of Operations and Information Management at School of Business, University of Connecticut (UConn). Fasheng’s general research interests lie in the interface of operations, finance, and economics, with a particular focus on the economic and social implications of emerging technologies. His current research examines how Generative AI reshapes organizational structure and market dynamics, the rise of the agentic economy, the governance and optimization of agentic systems, and the economics and financing of AI supply chains.</p>
           <p>His work has been published in top-tier academic journals such as <em>Management Science</em> and <em>M&amp;SOM</em>, and he has received multiple best paper nominations along with prestigious research awards, including the 2025 Chelliah Sriskandarajah Early Career Research Accomplishments Award. At UConn, Fasheng designed and launched a new MBA course on Supply Chain Finance. He also recently co-authored a book, <em>The Owner: A Business Novel about Work in the GenAI Era</em>, which translates these research themes into narrative form for broader audiences.</p>
           <ul class="facts">
-            <li><span class="fk">Position</span><span class="fv"><b>Associate Professor (with Tenure), OPIM</b> <span>· UConn School of Business, 2026 –</span><br>Assistant Professor, OPIM <span>· UConn School of Business, 2023 – 2026</span></span></li>
-            <li><span class="fk">Previously</span><span class="fv">Assistant Professor of SCM <span>· Syracuse (Whitman), 2019 – 2023</span></span></li>
-            <li><span class="fk">Ph.D.</span><span class="fv">Operations Management <span>· Olin Business School, WashU, 2019</span></span></li>
+            <li><span class="fk">Position</span><span class="fv"><b>Associate Professor (with Tenure), OPIM</b> <span>· University of Connecticut, School of Business, 2026 –</span><br>Assistant Professor, OPIM <span>· University of Connecticut, School of Business, 2023 – 2026</span></span></li>
+            <li><span class="fk">Previously</span><span class="fv">Assistant Professor of SCM <span>· Syracuse University, Whitman School of Management, 2019 – 2023</span></span></li>
+            <li><span class="fk">Ph.D.</span><span class="fv">Operations Management <span>· Washington University in St. Louis, Olin Business School, 2019</span></span></li>
             <li><span class="fk">B.S.</span><span class="fv">Industrial Engineering <span>· Shanghai Jiao Tong University, 2013</span></span></li>
           </ul>
         </div>
@@ -822,7 +822,7 @@ function render(){
     let items = PAPERS.filter(p=>p.g===g.key);
     if(!items.length) return;
     if(g.key==="review") items = items.slice().sort((a,b)=> (b.venue==="Management Science") - (a.venue==="Management Science"));
-    const ulcls = g.key==="published" ? "plist plist--numbered" : "plist";
+    const ulcls = "plist plist--numbered";
     html += `<div class="group" data-group="${g.key}">
       <div class="group__head"><h3>${esc(g.label)}</h3><span class="gc mono" data-gc="${g.key}"></span></div>
       <ul class="${ulcls}">${items.map(paperHTML).join("")}</ul>
