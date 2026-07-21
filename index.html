@@ -310,6 +310,10 @@
   .workshop__body{min-width:0}
   .workshop__title{font-size:clamp(23px,3vw,31px)}
   .workshop__blurb{margin-top:16px;color:var(--ink-soft);max-width:64ch;font-size:15.5px}
+  .workshop__meta{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin-top:10px;font-family:var(--sans);font-size:14px;font-weight:500;color:var(--ink-soft)}
+  .workshop__meta .item{display:inline-flex;align-items:center;gap:6px}
+  .workshop__meta svg{width:15px;height:15px;flex:none;stroke:var(--accent-ink)}
+  .workshop__meta .sep{color:var(--ink-faint)}
   .workshop__img{display:block;flex:none;padding:0;border:0;background:none;cursor:zoom-in;line-height:0;border-radius:10px;overflow:hidden;box-shadow:0 10px 34px rgba(27,26,23,.16),0 2px 8px rgba(27,26,23,.08);position:relative;transition:transform .25s ease}
   .workshop__img:hover{transform:translateY(-3px)}
   .workshop__img img{display:block;width:clamp(190px,26vw,290px);height:auto;border:1px solid var(--line)}
@@ -519,7 +523,7 @@
         <div class="workshop__body">
           <div class="book__tag">Invited Workshop</div>
           <h3 class="book__title workshop__title">PhD Workshop on GenAI and the Agentic Future</h3>
-          <p class="book__sub" style="font-family:var(--sans);font-style:normal">Summer 2026 @ School of Management, Zhejiang University</p>
+          <p class="workshop__meta"><span class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg>Summer 2026</span><span class="sep" aria-hidden="true">·</span><span class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>School of Management, Zhejiang University</span></p>
           <p class="book__blurb workshop__blurb">This workshop provides a broad overview of how generative AI is reshaping research, organizations, markets, and infrastructure. We begin by examining the state of AI in 2026, situating GenAI within the larger technological landscape, identifying the organizational barriers that limit adoption, and engaging the “bitter lesson” perspective on intelligence. We then turn to agentic research workflows, exploring how AI agents can support the research process, how researchers can build reusable agent skills, and what autonomous research may imply for the future of science itself. The workshop next considers the emerging agentic economy, where AI agents reshape organizational design, mediate commerce, and give rise to new forms of economic activity. Finally, we examine the AI supply chain, focusing on the infrastructure, financing, and systemic risks that make large-scale AI possible, with particular attention to data centers and the GPU economy. Together, these sections offer a big-picture framework for understanding GenAI not only as a tool, but as a transformative force across knowledge work, markets, organizations, and society.</p>
         </div>
         <button class="workshop__img" type="button" data-lightbox aria-label="Enlarge the workshop poster">
@@ -583,7 +587,7 @@
           <div class="eyebrow" style="margin-bottom:16px">Recent courses</div>
           <div class="courses">
             <div class="course"><div class="cn">PhD Workshop on GenAI and the Agentic Future</div><div class="cm">This workshop provides a broad overview of how generative AI is reshaping research, organizations, markets, and infrastructure.</div><div class="cy">Zhejiang University · Summer 2026</div></div>
-            <div class="course"><div class="cn">Supply Chain Finance</div><div class="cm">MBA, MSBAPM &amp; MS in FinTech — developed and launched this entirely new course. <a href="https://www.fashengxu.com/OPIM5115-Syllabus.pdf" target="_blank" rel="noopener" style="color:var(--accent-ink);white-space:nowrap">Syllabus&nbsp;(PDF)</a></div><div class="cy">UConn · 2025 –</div></div>
+            <div class="course"><div class="cn">Supply Chain Finance</div><div class="cm">MBA, MSBAPM &amp; MS in FinTech — developed and launched this entirely new course. <a href="https://www.fashengxu.com/OPIM5115-Syllabus.pdf" target="_blank" rel="noopener" style="color:var(--accent-ink);white-space:nowrap">[Syllabus]</a></div><div class="cy">UConn · 2025 –</div></div>
             <div class="course"><div class="cn">Operations Management</div><div class="cm">MBA and MSBAPM core.</div><div class="cy">UConn · 2023 –</div></div>
             <div class="course"><div class="cn">Introduction to Supply Chain Management</div><div class="cm">Undergraduate core — 3 sections, 150+ students per year.</div><div class="cy">Syracuse · 2019 – 2022</div></div>
           </div>
