@@ -181,8 +181,9 @@
   .btn--primary:hover{background:var(--accent-ink)}
   .btn svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.7}
 
-  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr));gap:1px;margin-top:52px;
+  .stats{display:grid;grid-template-columns:1fr;gap:1px;margin-top:44px;
     background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+  @media (min-width:860px){.stats{grid-template-columns:repeat(5,1fr)}}
   .stat{background:var(--paper);padding:18px 20px}
   .stat .n{font-family:var(--serif);font-size:clamp(26px,3.4vw,34px);font-weight:600;letter-spacing:-.02em;line-height:1;color:var(--accent-ink)}
   .stat .l{margin-top:9px;font-size:12.5px;color:var(--ink-soft);line-height:1.35}
@@ -190,6 +191,9 @@
   a.stat--link:hover{background:var(--panel-2)}
   .stat--book .n{font-size:clamp(19px,2.4vw,25px);line-height:1.08}
   .stat--book .n em{font-size:1em}
+  .stat--book .l::after{content:" \2192";color:var(--accent-ink);font-weight:600}
+  .stat--ext .l::after{content:" \2197";color:var(--accent-ink);font-weight:600}
+  a.stat--link:focus-visible{outline-offset:-4px}
   
 
   /* ============================ SECTIONS ============================ */
@@ -202,6 +206,17 @@
   .sec-head p{margin-top:12px;color:var(--ink-soft);max-width:62ch}
   .sec-num{font-family:var(--mono);font-size:12px;color:var(--ink-faint);letter-spacing:.1em}
 
+  /* ============================ AREAS OF FOCUS ============================ */
+  .focus{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-top:8px}
+  @media (min-width:560px){.focus{grid-template-columns:repeat(2,1fr)}}
+  @media (min-width:880px){.focus{grid-template-columns:repeat(3,1fr)}}
+  .focus__card{background:var(--panel);padding:24px 24px 26px}
+  .focus__num{font-family:var(--mono);font-size:12px;letter-spacing:.12em;color:var(--accent-ink)}
+  .focus__card h3{font-size:20px;margin:9px 0 9px;letter-spacing:-.01em}
+  .focus__card p{color:var(--ink-soft);font-size:14.5px;line-height:1.55;margin:0}
+  .papers-head{margin-top:clamp(40px,6vw,64px)}
+  .papers-head__title{font-size:clamp(22px,3vw,28px);letter-spacing:-.01em}
+  .papers-head p{margin-top:10px;color:var(--ink-soft);max-width:62ch}
   /* ============================ RESEARCH CONTROLS ============================ */
   .controls{position:sticky;top:60px;z-index:20;padding:16px 0 14px;margin-bottom:8px;
     background:color-mix(in srgb,var(--paper) 90%,transparent);
@@ -234,6 +249,9 @@
   .group__head h3{font-family:var(--mono);font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
   .group__head .gc{font-family:var(--mono);font-size:12px;color:var(--ink-faint)}
   .plist{list-style:none;margin:0;padding:0}
+  .plist--numbered{counter-reset:pub}
+  .plist--numbered .paper{padding-left:42px}
+  .plist--numbered .paper::before{counter-increment:pub;content:counter(pub);position:absolute;left:0;top:23px;width:28px;text-align:right;font-family:var(--serif);font-size:15px;color:var(--ink-faint);font-variant-numeric:tabular-nums}
   .paper{padding:22px 4px 22px;border-bottom:1px solid var(--line);position:relative;transition:background .16s}
   .paper:hover{background:color-mix(in srgb,var(--panel-2) 55%,transparent)}
   .paper__top{display:flex;align-items:center;gap:12px;margin-bottom:9px;flex-wrap:wrap}
@@ -302,7 +320,7 @@
   .lightbox.open{display:flex}
   .lightbox img{max-width:min(780px,94vw);max-height:94vh;border-radius:8px;box-shadow:0 24px 70px rgba(0,0,0,.55)}
   /* ============================ RECOGNITION ============================ */
-  .awards{display:grid;grid-template-columns:1.15fr 1fr;gap:44px}
+  .awards{display:grid;grid-template-columns:0.8fr 1.2fr;gap:44px}
   @media (max-width:800px){.awards{grid-template-columns:1fr;gap:34px}}
   .award-feature{background:var(--panel);border:1px solid var(--line-strong);border-top:2px solid var(--accent);padding:26px 26px 24px;position:relative}
   .award-feature h3 a{color:inherit;text-decoration:none}
@@ -391,18 +409,12 @@
           </div>
         </div>
       </div>
-      <div class="hero__cta">
-        <a class="btn btn--primary" href="#research">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
-          Explore the research
-        </a>
-      </div>
       <div class="stats" role="list" aria-label="Highlights">
-        <a class="stat stat--link stat--book" href="#genai" role="listitem"><div class="n"><em>The Owner</em></div><div class="l">New book on work in the GenAI era</div></a>
-        <a class="stat stat--link" href="https://scholar.google.com/citations?user=NQZrNUcAAAAJ&amp;hl=en" target="_blank" rel="noopener" role="listitem"><div class="n mono">1,291</div><div class="l">Google Scholar citations</div></a>
-        <div class="stat" role="listitem"><div class="n mono">7</div><div class="l">in <i>Management Science</i> &amp; M&amp;SOM</div></div>
+        <a class="stat stat--link stat--ext" href="https://scholar.google.com/citations?user=NQZrNUcAAAAJ&amp;hl=en" target="_blank" rel="noopener" role="listitem"><div class="n mono">1,291</div><div class="l">Google Scholar citations</div></a>
+        <div class="stat" role="listitem"><div class="n mono">7</div><div class="l">in Management Science &amp; M&amp;SOM</div></div>
         <div class="stat" role="listitem"><div class="n mono">25<span style="font-size:.6em">+</span></div><div class="l">Working &amp; under-review papers</div></div>
         <div class="stat" role="listitem"><div class="n mono">2025</div><div class="l">POMS Early Career Research Award</div></div>
+        <a class="stat stat--link stat--book" href="#genai" role="listitem"><div class="n"><em>The Owner</em></div><div class="l">New book on work in the GenAI era</div></a>
       </div>
     </div>
   </section>
@@ -413,10 +425,9 @@
       <div class="sec-head reveal">
         <div class="k">
           <div class="eyebrow"><span class="sec-num">01 / </span>About</div>
-          <h2>Background &amp; contact</h2>
         </div>
       </div>
-      <div class="grid2 reveal" style="grid-template-columns:minmax(0,720px)">
+      <div class="grid2 reveal" style="grid-template-columns:1fr">
         <div class="bio">
           <p>Fasheng Xu is an Associate Professor of Operations and Information Management at School of Business, University of Connecticut (UConn). Fasheng’s general research interests lie in the interface of operations, finance, and economics, with a particular focus on the economic and social implications of emerging technologies. His current research examines how Generative AI reshapes organizational structure and market dynamics, the rise of the agentic economy, the governance and optimization of agentic systems, and the economics and financing of AI supply chains.</p>
           <p>His work has been published in top-tier academic journals such as <em>Management Science</em> and <em>M&amp;SOM</em>, and he has received multiple best paper nominations along with prestigious research awards, including the 2025 Chelliah Sriskandarajah Early Career Research Accomplishments Award. At UConn, Fasheng designed and launched a new MBA course on Supply Chain Finance. He also recently co-authored a book, <em>The Owner: A Business Novel about Work in the GenAI Era</em>, which translates these research themes into narrative form for broader audiences.</p>
@@ -436,11 +447,23 @@
       <div class="sec-head reveal">
         <div class="k">
           <div class="eyebrow"><span class="sec-num">02 / </span>Research</div>
-          <h2>Papers, grouped by theme</h2>
-          <p>My work sits at the interface of operations, finance, and emerging technology. Filter by topic or search by title, coauthor, or journal. Many papers span more than one theme.</p>
+          <h2>Areas of Focus</h2>
+          <p>My research lies at the interface of operations, finance, and economics, with a focus on the economic and social implications of emerging technologies. It spans six connected themes.</p>
         </div>
       </div>
 
+      <div class="focus reveal">
+        <div class="focus__card"><div class="focus__num">01</div><h3>Generative AI</h3><p>Economics of GenAI, foundation models, AI agents and agentic commerce, GenAI and the workforce, and the AI supply chain.</p></div>
+        <div class="focus__card"><div class="focus__num">02</div><h3>Blockchain</h3><p>Smart contracts, asset tokenization, crypto markets, Web3, DAOs, and decentralized finance (DeFi).</p></div>
+        <div class="focus__card"><div class="focus__num">03</div><h3>Supply Chain Finance</h3><p>Reverse factoring, trade finance, deep-tier SCF, and sustainable supply chain finance.</p></div>
+        <div class="focus__card"><div class="focus__num">04</div><h3>FinTech</h3><p>FinTech lending, open banking, social trading, and market microstructure.</p></div>
+        <div class="focus__card"><div class="focus__num">05</div><h3>Data Economics</h3><p>GDPR and consumer privacy, differential privacy, and the design of data markets.</p></div>
+        <div class="focus__card"><div class="focus__num">06</div><h3>Digital Platforms</h3><p>Crowdfunding, livestream commerce, online influencers, and the creator economy.</p></div>
+      </div>
+      <div class="papers-head reveal">
+        <h2 class="papers-head__title">Publications &amp; Working Papers</h2>
+        <p>Filter by topic or search by title, coauthor, or journal. Many papers span more than one theme.</p>
+      </div>
       <div class="controls reveal" id="controls">
         <div class="filters" id="filters" role="group" aria-label="Filter papers by topic"></div>
         <div class="controls__row2">
@@ -491,7 +514,7 @@
         <div class="workshop__body">
           <div class="book__tag">Invited Workshop</div>
           <h3 class="book__title workshop__title">PhD Workshop on GenAI and the Agentic Future</h3>
-          <p class="book__sub">Two-day PhD Workshop · School of Management, Zhejiang University</p>
+          <p class="book__sub">Two-day PhD Workshop · School of Management, Zhejiang University · Summer 2026</p>
           <p class="book__blurb workshop__blurb">This workshop provides a broad overview of how generative AI is reshaping research, organizations, markets, and infrastructure. We begin by examining the state of AI in 2026, situating GenAI within the larger technological landscape, identifying the organizational barriers that limit adoption, and engaging the “bitter lesson” perspective on intelligence. We then turn to agentic research workflows, exploring how AI agents can support the research process, how researchers can build reusable agent skills, and what autonomous research may imply for the future of science itself. The workshop next considers the emerging agentic economy, where AI agents reshape organizational design, mediate commerce, and give rise to new forms of economic activity. Finally, we examine the AI supply chain, focusing on the infrastructure, financing, and systemic risks that make large-scale AI possible, with particular attention to data centers and the GPU economy. Together, these sections offer a big-picture framework for understanding GenAI not only as a tool, but as a transformative force across knowledge work, markets, organizations, and society.</p>
         </div>
         <button class="workshop__img" type="button" data-lightbox aria-label="Enlarge the workshop poster">
@@ -520,7 +543,7 @@
         </div>
         <ul class="alist">
           <li><span class="ay">2026</span><span class="at">M&amp;SOM Meritorious Service Award</span></li>
-          <li><span class="ay">2025</span><span class="at">Best Paper Award, Runner-up<small>UConn School of Business — “Consumer Privacy in Online Retail Supply Chains”</small></span></li>
+          <li><span class="ay">2025</span><span class="at">Best Paper Award, Runner-up<small>UConn School of Business</small></span></li>
           <li><span class="ay">2022</span><span class="at">Guttag Junior Faculty Award<small>Whitman School of Management, Syracuse University</small></span></li>
           <li><span class="ay">2022</span><span class="at">Finalist, MSOM iFORM SIG Best Paper Award Competition</span></li>
           <li><span class="ay">2021</span><span class="at">Finalist, INFORMS Junior Faculty Interest Group (JFIG) Paper Competition</span></li>
@@ -719,7 +742,7 @@ const PAPERS = [
   {g:"working",y:2026,topics:["genai"],
    title:"When Better AI Hurts: Verification, Compliance, and AI–Human Handoffs in Service Systems",
    url:"https://ssrn.com/abstract=6975018",
-   authors:[["Guanling Yang"],["Cuihong Li"]],
+   authors:[["Guanling Yang"],["Cuihong Li"],["Ricky Roet-Green"]],
    notes:[{t:"Accepted for 2026 MSOM TIE SIG Conference"}]},
   {g:"working",y:2026,topics:["genai","data"],
    title:"Artificial Ceilings: The Training Data Paradox in Generative AI Ecosystems",
@@ -794,11 +817,13 @@ function render(){
   const root = document.getElementById("papers");
   let html = "";
   GROUPS.forEach(g=>{
-    const items = PAPERS.filter(p=>p.g===g.key);
+    let items = PAPERS.filter(p=>p.g===g.key);
     if(!items.length) return;
+    if(g.key==="review") items = items.slice().sort((a,b)=> (b.venue==="Management Science") - (a.venue==="Management Science"));
+    const ulcls = g.key==="published" ? "plist plist--numbered" : "plist";
     html += `<div class="group" data-group="${g.key}">
       <div class="group__head"><h3>${esc(g.label)}</h3><span class="gc mono" data-gc="${g.key}"></span></div>
-      <ul class="plist">${items.map(paperHTML).join("")}</ul>
+      <ul class="${ulcls}">${items.map(paperHTML).join("")}</ul>
     </div>`;
   });
   root.innerHTML = html;
