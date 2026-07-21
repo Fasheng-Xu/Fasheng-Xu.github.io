@@ -189,8 +189,6 @@
   .stat .l{margin-top:9px;font-size:12.5px;color:var(--ink-soft);line-height:1.35}
   a.stat--link{text-decoration:none;transition:background .18s}
   a.stat--link:hover{background:var(--panel-2)}
-  .stat--book .n{font-size:clamp(19px,2.4vw,25px);line-height:1.08}
-  .stat--book .n em{font-size:1em}
   .stat--book .l::after{content:" \2192";color:var(--accent-ink);font-weight:600}
   .stat--ext .l::after{content:" \2197";color:var(--accent-ink);font-weight:600}
   a.stat--link:focus-visible{outline-offset:-4px}
@@ -302,6 +300,9 @@
   .book__sub{font-family:var(--serif);font-style:italic;font-size:clamp(16px,2.1vw,20px);color:var(--ink-soft);margin-top:6px}
   .book__blurb{margin-top:16px;color:var(--ink-soft);max-width:56ch}
   .book__quote{font-family:var(--serif);font-style:italic;font-size:clamp(16px,1.9vw,19px);color:var(--accent-ink);margin-top:16px;line-height:1.4;max-width:40ch}
+  .book__desc{margin-top:clamp(28px,3.5vw,44px)}
+  .book__desc p{color:var(--ink-soft);margin-bottom:15px;line-height:1.7}
+  .book__desc p:last-child{margin-bottom:0}
   .book__meta{margin-top:12px;font-size:13px;color:var(--ink-faint)}
   .book__cta{margin-top:22px}
   @media (max-width:640px){.book{grid-template-columns:1fr;justify-items:start;gap:24px}}
@@ -500,7 +501,6 @@
           <div class="book__tag">New book · 2026</div>
           <h3 class="book__title">The Owner</h3>
           <p class="book__sub">A Business Novel about Work in the GenAI Era</p>
-          <p class="book__blurb">Written by teachers as much as practitioners, <em>The Owner</em> asks what organizations must change about themselves before AI can change anything for them. It follows a consulting firm trying to survive a market that rewards speed over responsibility — and the people who have to decide what they are willing to answer for. The failures are rarely about the model; they are about who owns the process it is part of. The characters are fictional; the patterns are not.</p>
           <p class="book__quote">“AI changes tasks. Workflows need owners.”</p>
           <div class="book__meta">Available in Kindle, paperback &amp; audiobook.</div>
           <div class="book__cta">
@@ -510,6 +510,11 @@
             </a>
           </div>
         </div>
+      </div>
+      <div class="book__desc reveal">
+        <p>We wrote this book as teachers as much as practitioners. In the classroom we kept asking what our students should become in an AI-rich world — faster prompt writers, or people who can evaluate, take responsibility, and redesign real work. That question pushed us toward a harder one: if work is changing, what should organizations look like so people can do accountable, high-quality work with AI?</p>
+        <p>Talking with leaders living these tensions every day, we heard the same pattern. The failures were rarely about the model; they were about who owned the process the model was part of, and what happened when nobody did. AI didn’t create the dysfunction — it accelerated what was already there: unclear authority, misaligned incentives, workflows no single person owned. AI does not remove work. It moves work.</p>
+        <p>The story follows a consulting firm trying to survive a market that rewards speed over responsibility, and the people who must decide what they are willing to answer for. It begins with pilots, demos, and the optimism of a powerful new tool; it ends somewhere harder and more honest — with what organizations must change about themselves before AI can change anything for them. The characters and companies are fictional. The patterns are not.</p>
       </div>
       <div class="workshop reveal">
         <div class="workshop__body">
