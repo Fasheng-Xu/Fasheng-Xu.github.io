@@ -823,7 +823,13 @@ function render(){
   GROUPS.forEach(g=>{
     let items = PAPERS.filter(p=>p.g===g.key);
     if(!items.length) return;
-    if(g.key==="review") items = items.slice().sort((a,b)=> (b.venue==="Management Science") - (a.venue==="Management Science"));
+    if(g.key==="review"){
+      const so={rev:0,rr:1,und:2};
+      items = items.slice().sort((a,b)=>{
+        const d = (so[a.status[0]] ?? 9) - (so[b.status[0]] ?? 9);
+        return d !== 0 ? d : (b.venue==="Management Science") - (a.venue==="Management Science");
+      });
+    }
     const ulcls = "plist plist--numbered";
     html += `<div class="group" data-group="${g.key}">
       <div class="group__head"><h3>${esc(g.label)}</h3><span class="gc mono" data-gc="${g.key}"></span></div>
