@@ -964,19 +964,10 @@ const io = new IntersectionObserver((es)=>{
 document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
 </script>
 
-<!-- ===== Visitor analytics (GoatCounter) =====
-     Enable in ~1 minute: create a free account at https://www.goatcounter.com/ ,
-     register the site code below (default: "fashengxu"), and tracking starts automatically.
-     View your stats anytime at https://fashengxu.goatcounter.com
-     Set GOATCOUNTER_CODE = "" to disable, or replace this whole block with a Google Analytics (GA4) snippet. -->
-<script>
-  var GOATCOUNTER_CODE = "fashengxu"; // your GoatCounter site code ("" disables tracking)
-  if (GOATCOUNTER_CODE) {
-    var gc = document.createElement('script');
-    gc.async = true; gc.src = '//gc.zgo.at/count.js';
-    gc.setAttribute('data-goatcounter', 'https://' + GOATCOUNTER_CODE + '.goatcounter.com/count');
-    document.head.appendChild(gc);
-  }
-</script>
+<!-- ===== Visitor analytics: TWIPLA (Visitor Analytics) =====
+     Standalone tracking snippet, site 909801b4-8536-11f1-9aa5-960004340fd3.
+     Loads app-worker.visitor-analytics.io; stats live in the TWIPLA dashboard.
+     GitHub-Pages standalone ONLY — the claude.ai artifact CSP blocks external scripts. -->
+<!-- TWIPLA Tracking Code for https://www.fashengxu.com --><script>(function(v,i,s,a,t){v[t]=v[t]||function(){(v[t].v=v[t].v||[]).push(arguments)};if(!v._visaSettings){v._visaSettings={}}v._visaSettings[a]={v:'1.0',s:a,a:'1',t:t};var b=i.getElementsByTagName('body')[0];var p=i.createElement('script');p.defer=1;p.async=1;p.src=s+'?s='+a;b.appendChild(p)})(window,document,'//app-worker.visitor-analytics.io/main.js','909801b4-8536-11f1-9aa5-960004340fd3','va')</script><!-- TWIPLA Tracking Code for https://www.fashengxu.com -->
 </body>
 </html>
