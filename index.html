@@ -151,8 +151,8 @@
   .hero__top{display:grid;grid-template-columns:auto 1fr;gap:clamp(22px,4vw,42px);align-items:center;margin-bottom:4px}
   .portrait{width:clamp(150px,20vw,196px);height:auto;aspect-ratio:1/1;object-fit:cover;object-position:50% 42%;border-radius:16px;border:1px solid var(--line-strong);box-shadow:var(--shadow);background:var(--panel-2);display:block}
   .hero__id{min-width:0}
-  .social{display:grid;grid-template-columns:repeat(auto-fit,minmax(0,158px));gap:8px;margin-top:18px;justify-content:start}
-  .social a{display:flex;justify-content:center;align-items:center;gap:7px;padding:7px 12px;border-radius:999px;border:1px solid var(--line-strong);background:var(--panel);color:var(--ink-soft);font-size:13px;font-weight:500;text-decoration:none;white-space:nowrap;box-shadow:var(--shadow);transition:transform .16s,color .18s,border-color .18s}
+  .social{display:flex;flex-wrap:nowrap;gap:8px;margin-top:18px;overflow-x:auto;scrollbar-width:thin;padding-bottom:2px}
+  .social a{display:inline-flex;flex:0 0 auto;align-items:center;gap:7px;padding:7px 12px;border-radius:999px;border:1px solid var(--line-strong);background:var(--panel);color:var(--ink-soft);font-size:13px;font-weight:500;text-decoration:none;white-space:nowrap;box-shadow:var(--shadow);transition:transform .16s,color .18s,border-color .18s}
   .social a:hover{transform:translateY(-1px);color:var(--accent-ink);border-color:color-mix(in srgb,var(--accent) 34%,var(--line-strong))}
   .social svg{width:15px;height:15px;flex:none}
   @media (max-width:600px){
