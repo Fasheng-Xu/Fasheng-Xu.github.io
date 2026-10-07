@@ -259,6 +259,7 @@
   .status.rev{color:#8a5a00;background:rgba(180,120,0,.13)}
   .status.und{color:var(--slate);background:color-mix(in srgb,var(--slate) 13%,transparent)}
   .status.rr{color:var(--t-data);background:color-mix(in srgb,var(--t-data) 14%,transparent)}
+  .status.min{color:var(--t-sustain);background:color-mix(in srgb,var(--t-sustain) 14%,transparent)}
   @media (prefers-color-scheme:dark){.status.rev{color:#e6b45a;background:rgba(230,180,90,.14)}}
   :root[data-theme="dark"] .status.rev{color:#e6b45a;background:rgba(230,180,90,.14)}
   :root[data-theme="light"] .status.rev{color:#8a5a00;background:rgba(180,120,0,.13)}
@@ -422,7 +423,7 @@
         </div>
       </div>
       <div class="stats" role="list" aria-label="Highlights">
-        <a class="stat stat--link stat--ext" href="https://scholar.google.com/citations?user=NQZrNUcAAAAJ&amp;hl=en" target="_blank" rel="noopener" role="listitem"><div class="n mono">1,341</div><div class="l">Google Scholar citations</div></a>
+        <a class="stat stat--link stat--ext" href="https://scholar.google.com/citations?user=NQZrNUcAAAAJ&amp;hl=en" target="_blank" rel="noopener" role="listitem"><div class="n mono">1,400</div><div class="l">Google Scholar citations</div></a>
         <div class="stat" role="listitem"><div class="n mono">7</div><div class="l">in Management Science &amp; M&amp;SOM</div></div>
         <div class="stat" role="listitem"><div class="n mono">27</div><div class="l">Working &amp; under-review papers</div></div>
         <div class="stat" role="listitem"><div class="n mono">2025</div><div class="l">POMS Early Career Research Award</div></div>
@@ -698,7 +699,7 @@ const PAPERS = [
    url:"https://ssrn.com/abstract=4999355",
    title:"The Economics of AI Foundation Models: Openness, Competition, and Governance",
    authors:[["Wei Chen"],["Xiaoyu Wang"],["Karen Xie"]]},
-  {g:"review",y:2026,venue:"M&SOM",flag:1,status:["rev","Major Revision"],topics:["blockchain","scf"],
+  {g:"review",y:2026,venue:"M&SOM",flag:1,status:["min","Minor Revision"],topics:["blockchain","scf"],
    url:"https://ssrn.com/abstract=4362566",
    title:"Invoice Tokenization for Deep-Tier Payables Finance",
    authors:[["Jing Hou"],["Burak Kazaz"]],
@@ -845,7 +846,7 @@ function render(){
     let items = PAPERS.filter(p=>p.g===g.key);
     if(!items.length) return;
     if(g.key==="review"){
-      const so={rev:0,rr:1,und:2};
+      const so={min:0,rev:1,rr:2,und:3};
       items = items.slice().sort((a,b)=>{
         const d = (so[a.status[0]] ?? 9) - (so[b.status[0]] ?? 9);
         return d !== 0 ? d : (b.venue==="Management Science") - (a.venue==="Management Science");
