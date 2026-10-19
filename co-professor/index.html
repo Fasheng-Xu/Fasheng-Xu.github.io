@@ -19,7 +19,7 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23f1f3f6'/%3E%3Ctext x='12' y='48' font-family='Georgia,serif' font-size='48' fill='%23244ed1'%3EC%3C/text%3E%3C/svg%3E">
   <link rel="preload" href="fonts/stix-two-text.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="live.css?v=5b5b768795">
+  <link rel="stylesheet" href="live.css?v=e75a5a172f">
   <script src="live.js?v=031b5e26c1" defer></script>
 </head>
 <body>
@@ -66,19 +66,6 @@
       <div class="chapter-heading"><p class="chapter-name">Research</p><h2 id="research-title">A stronger argument.<br>A clearer next revision.</h2></div>
       <p class="chapter-intro">From an analytical model to an empirical study or a funding proposal, start with the question you want to answer. Test the argument and the evidence against your target's criteria, and plan the next revision, which you write.</p>
       <div class="research-spread">
-        <figure class="research-sheet" data-reveal="wipe">
-          <div class="sheet-running-head">Inside a Readiness Review <span>Illustrative example</span></div>
-          <h3>A finding you can<br>trace and act on.</h3>
-          <p class="paper-excerpt">A table entry disagrees with the stated expression.</p>
-          <dl class="finding-evidence">
-            <div><dt>Location</dt><dd>Table 2, row 5, at r = 0.4</dd></div>
-            <div><dt>Evidence</dt><dd>Recomputing the expression gives 0.312. The table reports 0.321.</dd></div>
-            <div><dt>Assessment</dt><dd>Fixable · High confidence in this check</dd></div>
-          </dl>
-          <div class="correction"><span class="old-value"><span class="visually-hidden">Reported: </span>0.321</span><span aria-hidden="true">→</span><strong><span class="visually-hidden">Recomputed: </span>0.312</strong></div>
-          <div class="revision-line"><span>The next revision</span><p>Correct the entry, regenerate the table and check the remaining rows against the same expression.</p></div>
-          <figcaption>A synthetic analytical example. It illustrates the format, not a result from a customer's paper.</figcaption>
-        </figure>
         <div class="research-prose">
           <article>
             <h3>Go deeper than general feedback.</h3>
@@ -97,6 +84,141 @@
           <a class="text-action route-link" href="#pilot">Request a research pilot</a>
         </div>
       </div>
+      <div class="review-build" id="inside-review">
+        <div class="sheet-running-head">Inside a Readiness Review <span>Full review of an analytical paper in LaTeX</span></div>
+        <div class="build-opening">
+          <h3 id="build-title"><span>Thirteen agents, one job each.</span> <span>Three of them test other agents' work.</span></h3>
+          <p class="build-lead">A full Readiness Review is not one long prompt. It runs 18 stages: 13 AI agents, each with its own written method and only the tools its job needs, and 5 steps of plain code. What matters is what happens to each point before it reaches you.</p>
+        </div>
+        <ul class="build-principles">
+          <li><h4>One job per agent.</h4><p>Separate agents map the paper, judge fit, raise concerns, audit the proofs, the economic logic and the figures, and check the citations. None is given a tool to search or read the web.</p></li>
+          <li><h4>Concerns are raised by one agent and tested by two others.</h4><p>A concern that fails either test is dropped, and the report's appendix keeps it with the reason. Other findings stand on their own evidence, and the report says when a finding was not independently checked.</p></li>
+          <li><h4>Evidence first, then a cautious verdict.</h4><p>Every finding names its place in your paper and its evidence, such as a quote or a computation. A second agent re-derives the verdict without the first one's reasoning; if they differ, the more cautious one stands.</p></li>
+        </ul>
+        <figure class="build-figure" aria-labelledby="build-map-title">
+          <p class="figure-label" id="build-map-title">How the 18 stages fit together</p>
+          <ul class="bm-legend" aria-hidden="true">
+            <li class="lg-find">Agent</li>
+            <li class="lg-check">Agent that tests another stage's work</li>
+            <li class="lg-code">Plain code, no AI model</li>
+            <li class="lg-arrow">The next stage waits for this one</li>
+            <li class="lg-same">No arrow between boxes: neither waits for the other</li>
+          </ul>
+          <ol class="build-map">
+            <li class="bm-node bm-bar">
+              <div class="bm-head"><h4><span class="bm-step">01</span> Prepare and map the paper</h4></div>
+              <div class="bm-body">
+                <p class="bm-code">Plain code first: compiles your LaTeX and removes the author block, affiliations, emails, acknowledgments and PDF metadata.</p>
+                <p>An agent then maps the notation, assumptions, results, proofs and claims that every later stage works from.</p>
+              </div>
+            </li>
+            <li class="bm-parallel">
+              <p class="bm-parallel-label"><span class="bm-step">02 to 04</span> Two tracks, run at the same time</p>
+              <div class="bm-col">
+                <p class="bm-track-label" id="bm-track-concerns">Concerns track</p>
+                <ol class="bm-track-a" aria-labelledby="bm-track-concerns">
+                  <li class="bm-node"><h4><span class="bm-step">02</span> Fit to your target</h4><p class="bm-code">Plain code first: finds candidate prior work from your reference titles.</p><p>Reads the paper against the verified profile of your journal and, for Management Science, your department's statement, quoted word for word. Places the paper against its closest prior work.</p></li>
+                  <li class="bm-node"><h4><span class="bm-step">03</span> Concerns panel</h4><p>Reads the paper four ways: the size of the insight, the model, the link to practice and what the abstract promises. Drops each draft concern the paper already answers, and labels the rest fatal, structural or fixable.</p></li>
+                  <li class="bm-pair">
+                    <p class="bm-pair-label"><span class="bm-step">04</span> Two tests of each concern, run separately</p>
+                    <ul class="bm-tiles">
+                      <li class="bm-node bm-check"><h4>Claim check</h4><p>Splits each concern into statements about your paper and finds the passage for each.</p><p class="bm-tag">Tests the concerns panel (03)</p></li>
+                      <li class="bm-node bm-check"><h4>Adversarial verifier</h4><p>Tries to overturn each concern, most serious first. For a technical concern it runs its own calculations or builds a counterexample that meets all your stated assumptions; a concern about exposition or positioning gets a close rereading of the paper.</p><p class="bm-tag">Tests the concerns panel (03)</p></li>
+                    </ul>
+                  </li>
+                </ol>
+              </div>
+              <div class="bm-col">
+                <p class="bm-track-label" id="bm-track-audit">Audit track <span>Runs alongside the concerns track. Does not wait for the concerns and is not given them.</span></p>
+                <ul class="bm-tiles bm-track-b" aria-labelledby="bm-track-audit">
+                  <li class="bm-node"><h4>Proof auditor</h4><p>Checks each derivation in the order the results depend on each other, including signs, boundary cases and conditions the statement leaves out, and re-derives the algebra itself.</p></li>
+                  <li class="bm-node"><h4>Model economist</h4><p>Asks whether each headline result comes from an economic mechanism or from a modeling choice, such as the timing or a functional form that, if changed, would reverse it.</p></li>
+                  <li class="bm-node"><h4>Figure auditor</h4><p class="bm-code">Plain code first: runs your Python figure code.</p><p>Checks that the code solves the model in the text, with parameters inside your assumptions and captions that match the curves. Other languages are read, not run.</p></li>
+                  <li class="bm-node"><h4>Citation check</h4><p class="bm-code">Plain code first: looks up every reference in Crossref and OpenAlex, sending titles only.</p><p>Flags references that do not match a record, and checks that key citations support the sentences that cite them.</p></li>
+                </ul>
+              </div>
+            </li>
+            <li class="bm-node bm-bar bm-coord">
+              <div class="bm-head"><h4><span class="bm-step">05</span> Coordinator</h4></div>
+              <div class="bm-body">
+                <p>Drops any concern that fails either test, keeping the reason for the report's appendix. Merges findings that share a cause, keeps the lower label when stages disagree without decisive evidence, and orders the list, most serious first. It adds no issue of its own.</p>
+              </div>
+            </li>
+            <li class="bm-after">
+              <p class="bm-pair-label"><span class="bm-step">06</span> Then, at the same time</p>
+              <ul class="bm-tiles bm-three">
+                <li class="bm-node bm-check"><h4>Independent verdict</h4><p>A fresh agent with no tools applies the verdict rules to the final findings, without the coordinator's reasoning or draft. If the two verdicts differ, the more cautious one stands.</p><p class="bm-tag">Tests the coordinator's verdict (05)</p></li>
+                <li class="bm-node"><h4>Revision plan</h4><p>Orders the open findings and sizes each in hours, days or weeks. Local fixes come as exact before-and-after edits of one sentence or paragraph, larger work as instructions. It never writes new results or proofs.</p></li>
+                <li class="bm-node"><h4>Compliance and disclosure</h4><p>Checks your journal's format rules, names two backup venues with their own rules and drafts an AI-use disclosure statement.</p></li>
+              </ul>
+            </li>
+            <li class="bm-node bm-bar bm-report">
+              <div class="bm-head"><h4>Your report</h4></div>
+              <div class="bm-body">
+                <p class="bm-code">Plain code, after every other stage has finished.</p>
+                <p>A report for your browser, a marked-up copy of your LaTeX with each original kept as a comment above the suggested change, a diff and a record of every stage. Each finding says how it was checked. Nothing is applied to your paper without you.</p>
+              </div>
+            </li>
+          </ol>
+          <figcaption class="bm-notes">
+            <p><b>Timing.</b> A stage starts once the stages it needs have finished, with up to three agents at work at once. The free Intro Check runs 7 of these stages, in reduced form, on your title, abstract, introduction and contribution statement. Two test runs took 4.3 to 4.5 minutes.</p>
+            <p><b>Where the design comes from.</b> The three technical auditors follow the workflow the founder uses to check analytical models: separate auditors for the algebra, the economic logic and the numerical figures, then one list of fixes, most important first.</p>
+          </figcaption>
+        </figure>
+        <div class="build-run">
+          <div>
+            <p class="figure-label">One measured run</p>
+            <p class="build-run-note">A test of the engine on a public 34-page arXiv preprint, read against Management Science, Operations Management, in October 2026. The coordinator said Not yet and the independent agent said Ready after fixes, so the more cautious level stood, and the report said so. One run on one paper shows the engine working end to end. It does not measure how often a review is right.</p>
+          </div>
+          <dl class="run-stats">
+            <div><dt>Stages, all completed</dt><dd>18</dd></div>
+            <div><dt>Minutes, start to finish</dt><dd>27.6</dd></div>
+            <div><dt>Findings: <span class="nobreak">2 structural,</span> <span class="nobreak">31 fixable</span></dt><dd>33</dd></div>
+            <div><dt>Verdict</dt><dd>Not yet</dd></div>
+          </dl>
+        </div>
+        <p class="build-pointer">The example below follows three findings through these stages: one dropped, one kept and one merged.</p>
+      </div>
+      <details class="report-details trace-details" id="review-example">
+        <summary><span id="trace-title">An illustrative example, followed stage by stage</span><span class="disclosure-symbol" aria-hidden="true"></span></summary>
+        <div class="report-content">
+          <figure class="trace-figure" aria-labelledby="trace-title">
+            <h4 class="sheet-running-head">Illustrative example <span>A synthetic paper written for this page</span></h4>
+            <p class="trace-setup">The paper: a newsvendor-style model in which a supplier sells to a retailer under a buyback contract, with wholesale price <var>w</var>, buyback price <var>b</var>, retail price <var>p</var> and unit cost <var>c</var>. Assumption 1 allows <span class="nobreak">0 &le; <var>b</var> &le; <var>w</var></span>. Proposition 2: the contract coordinates the channel (the two firms jointly earn the integrated profit) when <span class="nobreak"><var>b</var> = <var>p</var>(<var>w</var> &minus; <var>c</var>)/(<var>p</var> &minus; <var>c</var>)</span>. Proposition 3: the retailer orders more as <var>b</var> rises.</p>
+            <div class="trace-head" aria-hidden="true"><span>Raised by</span><span>Tested by</span><span>Coordinator</span><span>Revision plan</span></div>
+            <ol class="trace">
+              <li class="trace-item is-dropped">
+                <div class="trace-top"><h5>Proposition 2 may hold only for uniform demand.</h5><p class="trace-status">Dropped from the findings</p></div>
+                <dl>
+                  <div><dt>Raised by</dt><dd>The concerns panel: the numerical examples all use uniform demand.</dd></div>
+                  <div><dt>Tested by</dt><dd><b>Claim check:</b> the proof covers any demand distribution <var>F</var>, so the concern misreads it. <b>Verifier:</b> the retailer's first-order condition, <span class="nobreak"><var>F</var>(<var>q</var>) = (<var>p</var> &minus; <var>w</var>)/(<var>p</var> &minus; <var>b</var>)</span>, equals the channel's, <span class="nobreak"><var>F</var>(<var>q</var>) = (<var>p</var> &minus; <var>c</var>)/<var>p</var></span>, at that <var>b</var> for every <var>F</var>.</dd></div>
+                  <div><dt>Coordinator</dt><dd>Refuted by both tests, so dropped. The report's appendix keeps the reason.</dd></div>
+                  <div><dt>Revision plan</dt><dd>Nothing to do.</dd></div>
+                </dl>
+              </li>
+              <li class="trace-item">
+                <div class="trace-top"><h5>Assumption 1 allows a buyback price equal to the wholesale price.</h5><p class="trace-status">Kept · fixable, high confidence</p></div>
+                <dl>
+                  <div><dt>Raised by</dt><dd>The proof auditor, testing the endpoints of Assumption 1.</dd></div>
+                  <div><dt>Tested by</dt><dd>Not a panel concern, so it stands on the auditor's own symbolic check: at <span class="nobreak"><var>b</var> = <var>w</var></span> the first-order condition needs <span class="nobreak"><var>F</var>(<var>q</var>) = 1</span>, so there is no interior order, and the proof of Proposition 3 misses that endpoint.</dd></div>
+                  <div><dt>Coordinator</dt><dd>Confirmed by a computation, at high confidence. Labeled fixable.</dd></div>
+                  <div><dt>Revision plan</dt><dd><b>P1</b> · hours · Assumption 1<p class="edit"><span class="edit-label">Before</span> <span class="edit-old nobreak">0 &le; <var>b</var> <span class="edit-mark">&le;</span> <var>w</var></span> <span class="edit-label">After</span> <span class="edit-new nobreak">0 &le; <var>b</var> <span class="edit-mark">&lt;</span> <var>w</var></span></p></dd></div>
+                </dl>
+              </li>
+              <li class="trace-item">
+                <div class="trace-top"><h5>The model does not support the introduction's claim about the supplier's profit.</h5><p class="trace-status">Merged from two stages · fixable, high confidence</p></div>
+                <dl>
+                  <div><dt>Raised by</dt><dd>Two stages, separately: the concerns panel and the model economist. Both point to one sentence in the introduction: “Buyback contracts always raise the supplier's profit.”</dd></div>
+                  <div><dt>Tested by</dt><dd><b>Claim check:</b> the sentence is there, as quoted. <b>Verifier:</b> at <span class="nobreak"><var>p</var> = 10</span>, <span class="nobreak"><var>c</var> = 4</span> and <span class="nobreak"><var>w</var> = 4.1</span>, with exponential demand of mean 1, a coordinating buyback leaves the supplier 0.04, against 1.08 at its best wholesale price without buybacks. Coordination fixes the total; <var>w</var> sets the split.</dd></div>
+                  <div><dt>Coordinator</dt><dd>Merged into one finding that names both stages. Confirmed. Labeled fixable.</dd></div>
+                  <div><dt>Revision plan</dt><dd><b>P2</b> · hours · Introduction<p class="edit"><span class="edit-label">Before</span> <span class="edit-old">Buyback contracts always raise the supplier's profit.</span> <span class="edit-label">After</span> <span class="edit-new">With a suitable wholesale price, a buyback contract can raise both firms' profits.</span></p></dd></div>
+                </dl>
+              </li>
+            </ol>
+            <figcaption>A synthetic example written for this page. It follows three of the paper's findings, chosen to show how the stages hand work to each other. It is not taken from a customer's paper or from the measured run. A real report gives each finding its exact location and fuller reasoning.</figcaption>
+          </figure>
+        </div>
+      </details>
       <details class="report-details" id="report">
         <summary><span>What is in a Readiness Review for an analytical paper?</span><span class="disclosure-symbol" aria-hidden="true"></span></summary>
         <div class="report-content">
@@ -110,6 +232,22 @@
           <p class="detail-note">For example, a Management Science submission is read against the department you name. A clean audit does not certify correctness or predict acceptance.</p>
         </div>
       </details>
+      <a class="text-action route-link" href="#pilot" data-preselect="analytical">Request a paper review pilot</a>
+      <aside class="rr-pilot" id="rr-pilot" aria-labelledby="rr-title">
+        <div class="sheet-running-head">After a revise-and-resubmit <span>Optional pilot, outside the review engine</span></div>
+        <div class="rr-intro">
+          <h3 id="rr-title">Two opposing plans for each major concern.</h3>
+          <p>When a journal invites a revision, the question becomes how far to go on each concern. We run this workflow as a pilot today, following the founder's own method for planning a revision. It is separate from the Readiness Review engine, which has no revise-and-resubmit mode.</p>
+          <p class="rr-fine">You can describe each concern in your own words, so the reports themselves need not be shared. Follow your journal's rules on AI use.</p>
+          <a class="text-action route-link" href="#pilot" data-preselect="other">Ask about a revision pilot</a>
+        </div>
+        <ol class="rr-flow">
+          <li><h4><span class="bm-step">01</span> Sort</h4><p>You describe each concern, and each is marked major or minor.</p></li>
+          <li><h4><span class="bm-step">02</span> Argue both sides</h4><p>Each major concern goes to two agents at the same time.</p><div class="rr-roles"><p><b>Defender</b> Keeps what the paper contributes and looks for the smallest change that fully answers the concern.</p><p><b>Reformer</b> Asks whether the concern points to a deeper weakness, and sketches the larger change that would remove it.</p></div></li>
+          <li><h4><span class="bm-step">03</span> Weigh</h4><p>The two plans are set against each other and reconciled into one recommended response. Minor concerns get a single, direct pass.</p></li>
+          <li><h4><span class="bm-step">04</span> You decide</h4><p>You receive a memo, concern by concern, with suggested edits. Nothing is applied to your paper, and every choice stays yours.</p></li>
+        </ol>
+      </aside>
     </div>
   </section>
 
@@ -166,7 +304,7 @@
     <div class="page-width">
       <div class="differs-opening"><h2 id="differs-title">How this differs from what you already have</h2><p class="chapter-intro">You may already have a campus AI license, an AI review tool, an editor you trust or a teaching center. Each is useful. Here is what Co-Professor adds.</p></div>
       <ol class="differs-list">
-        <li><h3>A general chatbot or campus AI license.</h3><p>Good for many questions, and you may already have one. Co-Professor adds structure. For analytical papers: fact-checked profiles of journals and departments built from their published statements, citations looked up in bibliographic records, and a separate pass that tries to refute each finding before you see it. For courses: a staged redesign method in place of a blank prompt. Workflow guidance also helps you get more from the license you already have.</p></li>
+        <li><h3>A general chatbot or campus AI license.</h3><p>Good for many questions, and you may already have one. Co-Professor adds structure. For analytical papers: fact-checked profiles of journals and departments built from their published statements, citations looked up in bibliographic records, and separate passes that try to refute each concern before you see it. For courses: a staged redesign method in place of a blank prompt. Workflow guidance also helps you get more from the license you already have.</p></li>
         <li><h3>AI review and verification tools.</h3><p>Several check a manuscript line by line, and some do it well. We see them as a complement. For analytical papers, Co-Professor works from your LaTeX source and figure code, reads the draft against the criteria of the journal or department you are targeting, and returns a revision plan you carry out. It also reaches beyond the paper, to proposals, courses and the way you work.</p></li>
         <li><h3>An editor or consultant.</h3><p>A skilled human reader is worth having, and we do not replace one. Generic editing services rarely specialize in analytical OM, IS and OR models. Co-Professor is built by a business-school professor for business-school research and teaching and, where you want it, leaves you with workflows you can run yourself. Each pilot is scoped with you before it starts, at the prices below.</p></li>
         <li><h3>A teaching center workshop or the AI features in your course platform.</h3><p>Workshops teach principles, and built-in tools draft materials. Co-Professor works through your own course with you: which assessments show what students can do alone, where AI belongs, and the activities, rubrics and AI policy that follow.</p></li>
