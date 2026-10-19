@@ -325,8 +325,6 @@
   if (form) (function setUpForm() {
     var endpoint = (form.getAttribute("data-endpoint") || "").trim();
     if (!/^https:\/\/[^\s"'<>]+$/.test(endpoint)) endpoint = "";
-    var contact = (form.getAttribute("data-contact") || "").trim();
-    if (!/^[^@\s"'<>\[\]{}]+@[^@\s"'<>\[\]{}]+\.[^@\s"'<>\[\]{}]+$/.test(contact)) contact = "";
 
     var status = document.getElementById("f-status");
     var button = form.querySelector("button[type=submit]");
@@ -348,11 +346,11 @@
 
     var MAX_DESCRIPTION = 1500, MAX_BRIEF = 5000;
     var THANKS = "Thank you. Your request was sent. We will reply by email to agree on the scope before any work starts. Please do not send files until then.";
-    var EMAIL_US = contact ? " If it keeps failing, email " + contact + "." : "";
+    var EMAIL_US = " If it keeps failing, please come back later.";
     var FAILED = "That did not go through. Please try again in a minute." + EMAIL_US;
     var NO_REPLY = "No reply from the form service. Please try again in a minute." + EMAIL_US;
-    var WAIT = "Please wait a moment before trying again." + EMAIL_US;
-    var TOO_MANY = "Too many attempts from this browser tab. Please try again later" + (contact ? ", or email " + contact + "." : ".");
+    var WAIT = "Please wait a moment before trying again.";
+    var TOO_MANY = "Too many attempts from this browser tab. Please try again later.";
     var PREVIEW = "Preview only: this copy of the page does not send requests.";
     var PASTED = /\\documentclass|\\begin\{document\}|\\section\{|\\usepackage/;
     // Basic client-side rate limit: one attempt per 30 seconds and at most 5 an hour from this

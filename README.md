@@ -20,8 +20,7 @@ merged). To refresh it, run from that repository:
 ```sh
 python3 -I site/test_site.py
 python3 site/build_static.py --mode live --release \
-  --endpoint https://formspree.io/f/mvkznbry \
-  --contact francisxu2025@gmail.com
+  --endpoint https://formspree.io/f/mvkznbry
 ```
 
 Then replace these files in this repository's `co-professor/` folder with the
@@ -29,7 +28,8 @@ contents of `site/dist/live/`: `index.html`, `live.css`, `live.js` and `fonts/`.
 Leave `editorial/`, `cinematic/` and `archive/` as they are.
 
 - The page has a pilot request form that posts to Formspree (form `mvkznbry`).
-  Requests arrive in the Formspree dashboard and by email.
+  Requests arrive in the Formspree dashboard and by email. The page publishes
+  no email address.
 - `editorial/` and `cinematic/` redirect the retired design-review URLs to the
   main page.
 - `archive/2026-10-19-codex/` keeps the previous (Codex) version of the page,

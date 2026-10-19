@@ -20,7 +20,7 @@
   <link rel="preload" href="fonts/stix-two-text.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="live.css?v=bb4ad9db97">
-  <script src="live.js?v=6348414c4c" defer></script>
+  <script src="live.js?v=031b5e26c1" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -190,8 +190,8 @@
       </div>
       <div class="pilot-layout">
         <div class="pilot-form-wrap">
-          <p class="noscript-note" id="f-fallback">The request form needs JavaScript. If it does not appear, email <a href="mailto:francisxu2025@gmail.com">francisxu2025@gmail.com</a> instead with a few lines about your project. Please do not attach files.</p>
-          <form id="pilot-form" class="pilot-form" method="post" novalidate hidden data-endpoint="https://formspree.io/f/mvkznbry" data-contact="francisxu2025@gmail.com">
+          <p class="noscript-note" id="f-fallback">The request form needs JavaScript. If it does not appear, please turn JavaScript on or open this page in another browser.</p>
+          <form id="pilot-form" class="pilot-form" method="post" novalidate hidden data-endpoint="https://formspree.io/f/mvkznbry">
             <div class="field-row">
               <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" maxlength="200" required></div>
               <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" maxlength="254" required aria-describedby="f-email-help"><p class="field-help" id="f-email-help">We use it only to reply about your request.</p></div>
@@ -213,7 +213,7 @@
             </div>
             <label class="check" for="f-permission"><input id="f-permission" name="permission" type="checkbox" value="yes" required><span>The project I describe is my own, or I have permission to share it. It is not a manuscript I received in confidence for peer review.</span></label>
             <label class="check" for="f-consent"><input id="f-consent" name="consent" type="checkbox" value="yes" required><span>I agree that Co-Professor may keep these details to reply to my request and scope a pilot, as described in the <a href="#privacy">privacy note</a>.</span></label>
-            <input type="hidden" name="privacy_note_version" value="pn-a682d464b091">
+            <input type="hidden" name="privacy_note_version" value="pn-020fa3b70d8c">
             <div class="hp" aria-hidden="true"><label for="f-leave-blank">Leave this field blank<input id="f-leave-blank" name="_gotcha" type="text" tabindex="-1" autocomplete="off"></label></div>
             <div class="form-actions"><button class="submit" type="submit">Send pilot request</button><p class="form-note" id="f-offline" hidden>This form is not connected yet. It sends nothing.</p></div>
             <p class="form-status" id="f-status" role="status" aria-live="polite"></p>
@@ -227,13 +227,13 @@
           <p><b>Where and for how long.</b> Stored by our form provider, Formspree, and in the mailbox where we read requests. We delete both copies 12 months after your request, or sooner if you ask. When you send the form, Formspree also receives what any web request carries, such as your IP address and browser type.</p>
           <p><b>This page.</b> It sets no cookies and loads nothing from other sites. The brief tool keeps your brief in this browser tab only. To limit repeated sends, the form keeps the times of your send attempts in this browser tab until you close it. Like any web host, the service that serves this page may record standard request data, such as IP addresses.</p>
           <p><b>If a pilot goes ahead.</b> The materials you share are covered by the terms we agree on for that pilot, not by this note.</p>
-          <p><b>Your choices.</b> To see, correct or delete your details, or to withdraw your consent, email <a href="mailto:francisxu2025@gmail.com">francisxu2025@gmail.com</a>. We reply within 30 days.</p>
+          <p><b>Your choices.</b> To see, correct or delete your details, or to withdraw your consent, reply to any email we have sent you, or send a new request through this form, choose “Something else” and say what you need. We reply within 30 days.</p>
         </aside>
       </div>
 
       <div class="brief-block" id="brief">
         <div class="brief-opening"><h3 id="brief-title">Want to think it through first?</h3><p class="chapter-intro">Build a project brief: choose a starting point, add your context and leave with an editable brief. It stays in this browser tab until you copy it, download it or add it to your request. Nothing is sent on its own.</p></div>
-        <p class="noscript-note" id="brief-fallback">The brief tool needs JavaScript. If it does not appear, you can describe your project by email to <a href="mailto:francisxu2025@gmail.com">francisxu2025@gmail.com</a>.</p>
+        <p class="noscript-note" id="brief-fallback">The brief tool needs JavaScript. If it does not appear, please turn JavaScript on or open this page in another browser.</p>
         <div class="composer" id="composer" hidden>
           <div class="brief-inputs">
             <fieldset class="task-choice"><legend>Starting point</legend><label class="visually-hidden" for="project-route">Starting point for your brief</label><select id="project-route"><optgroup label="Research"><option value="analytical">An analytical paper (LaTeX)</option><option value="empirical">An empirical paper</option><option value="funding">A funding proposal</option></optgroup><optgroup label="Teaching"><option value="ai-course">A course redesign for students who use AI</option><option value="materials">Lectures, slides and assignments</option><option value="course-package">A coherent course package</option><option value="simulation">A classroom simulation</option></optgroup><optgroup label="Workflows"><option value="workflow">AI workflow guidance for my own work</option></optgroup></select></fieldset>
