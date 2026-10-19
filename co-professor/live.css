@@ -73,7 +73,8 @@ h1 { max-width: 850px; font: 400 clamp(48px, 5.2vw, 74px)/1.035 var(--font-displ
 h1 em { color: var(--accent); font-style: normal; }
 h2 { font: 400 clamp(40px, 4.3vw, 64px)/1.07 var(--font-display); letter-spacing: -.035em; }
 .chapter { padding-block: var(--section); }
-.chapter-name { margin-bottom: 24px; font-size: 13px; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; }
+.chapter-name { margin-bottom: 26px; color: var(--ink); font-size: 19px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
+.chapter-num { margin-right: 4px; color: var(--accent); font-variant-numeric: lining-nums tabular-nums; }
 .chapter-intro { max-width: 64ch; margin-top: 24px; color: var(--ink-soft); font-size: 18px; line-height: 1.7; }
 .text-action { display: inline-block; font-weight: 600; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 7px; }
 .route-link { margin-top: 35px; font-size: 15px; }
@@ -125,12 +126,6 @@ h2 { font: 400 clamp(40px, 4.3vw, 64px)/1.07 var(--font-display); letter-spacing
 .disclosure-symbol::before { content: "+"; }
 details[open] > summary .disclosure-symbol::before { content: "\2212"; }
 .report-content { padding-bottom: 30px; }
-.report-intro { max-width: 78ch; color: var(--ink-soft); font-size: 16px; }
-.deliverables { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 60px; margin-top: 28px; }
-.deliverables div { padding-top: 20px; border-top: 1px solid #d9e0eb; }
-.deliverables dt { font-size: 16px; font-weight: 600; }
-.deliverables dd { max-width: 62ch; margin-top: 8px; color: var(--ink-soft); font-size: 14px; line-height: 1.7; }
-.detail-note { max-width: 90ch; margin-top: 30px; color: var(--ink-soft); font-size: 14px; line-height: 1.7; }
 
 /* Inside a Readiness Review: how a full review is built (research section) */
 .build-details .review-build { padding-top: 6px; }
@@ -487,7 +482,7 @@ h4.sheet-running-head { font-weight: 400; }
   .mission-band h2 { max-width: 23ch; font-size: clamp(32px, 8.5vw, 40px); }
   .mission-support { padding: 22px 0 0; border-left: 0; border-top: 1px solid #9eb5ff; font-size: 15px; }
   .mission-support span + span { margin-top: 5px; }
-  .chapter-name { margin-bottom: 20px; font-size: 12px; }
+  .chapter-name { margin-bottom: 20px; font-size: 16px; }
   h2 { font-size: 40px; }
   .chapter-intro { margin-top: 20px; font-size: 16px; }
   .research-spread, .teaching-spread { grid-template-columns: minmax(0, 1fr); gap: 36px; margin-top: 36px; }
@@ -496,8 +491,6 @@ h4.sheet-running-head { font-weight: 400; }
   .research-prose p, .teaching-prose p { font-size: 16px; line-height: 1.7; }
   .report-details { margin-top: 40px; }
   .report-details > summary { padding-block: 21px; font-size: 24px; }
-  .deliverables { grid-template-columns: minmax(0, 1fr); gap: 22px; }
-  .report-intro { font-size: 16px; }
   .teaching-spread { display: flex; flex-direction: column; }
   .teaching-prose { padding: 0; }
   .course-figure { width: 100%; max-width: 580px; padding-left: 15px; }
