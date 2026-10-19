@@ -12,30 +12,25 @@ To update, replace `index.html` and push to `main`.
 
 ## Co-Professor
 
-The standalone Co-Professor page is published at
-https://www.fashengxu.com/co-professor/ and linked from the homepage.
-
-Its chosen main design is editorial, with source in `Fasheng-Xu/co-professor`.
-To refresh it, run this command from that repository:
+The Co-Professor page is published at https://www.fashengxu.com/co-professor/
+and linked from the homepage. Its source is `site/live/` in the private
+`Fasheng-Xu/co-professor` repository (branch `claude/sharp-fermat-ybw7n4` until
+merged). To refresh it, run from that repository:
 
 ```sh
-python3 site/build_static.py --design editorial
+python3 -I site/test_site.py
+python3 site/build_static.py --mode live --release \
+  --endpoint https://formspree.io/f/mvkznbry \
+  --contact francisxu2025@gmail.com
 ```
 
-Copy all contents of `site/dist/` into this repository's `co-professor/`
-directory, including the main `index.html`, `editorial.css`, `editorial.js`,
-and `shared/` assets. Preserve the personal homepage's root `index.html`.
+Then replace these files in this repository's `co-professor/` folder with the
+contents of `site/dist/live/`: `index.html`, `live.css`, `live.js` and `fonts/`.
+Leave `editorial/`, `cinematic/` and `archive/` as they are.
 
-The main page includes the local project brief tool and does not collect form submissions.
-No university email address or email contact link is published on the Co-Professor pages.
-
-Both retired design-review URLs redirect to the main Co-Professor page:
-
-- https://www.fashengxu.com/co-professor/editorial/
-- https://www.fashengxu.com/co-professor/cinematic/
-
-The command above generates these redirects. Replace the `editorial/` and
-`cinematic/` output directories together so old review assets are removed.
-The main page uses local fonts and licensed Scroll Craft assets, with no AI
-requests or form submission service. Do not use `--include-design-previews`
-for the public build. The design sources remain in the source repository.
+- The page has a pilot request form that posts to Formspree (form `mvkznbry`).
+  Requests arrive in the Formspree dashboard and by email.
+- `editorial/` and `cinematic/` redirect the retired design-review URLs to the
+  main page.
+- `archive/2026-10-19-codex/` keeps the previous (Codex) version of the page,
+  unchanged except for a `noindex` tag. It is not linked from anywhere.
