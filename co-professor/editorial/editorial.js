@@ -108,5 +108,10 @@
   document.querySelectorAll("[data-route]").forEach(function (link) {
     link.addEventListener("click", function () { changeRoute(link.getAttribute("data-route")); });
   });
+  document.querySelectorAll("details").forEach(function (detail) {
+    detail.addEventListener("toggle", function () {
+      if (window.ScrollCraft && window.ScrollCraft.instances[0]) window.ScrollCraft.instances[0].layout();
+    });
+  });
   if (window.ScrollCraft && window.ScrollCraft.instances[0]) window.ScrollCraft.instances[0].layout();
 })();

@@ -15,24 +15,26 @@ To update, replace `index.html` and push to `main`.
 The standalone Co-Professor page is published at
 https://www.fashengxu.com/co-professor/ and linked from the homepage.
 
-Its source lives in `Fasheng-Xu/co-professor`. To refresh it, run this command
-from that repository, then copy `site/dist/index.html` to
-`co-professor/index.html` in this repository:
+Its chosen main design is editorial, with source in `Fasheng-Xu/co-professor`.
+To refresh it, run this command from that repository:
 
 ```sh
-python3 site/build_static.py --project-brief-url editorial/#project --home-url https://www.fashengxu.com/ --include-design-previews
+python3 site/build_static.py --design editorial --include-design-previews
 ```
 
-The public page links to the local project brief tool and does not collect form submissions.
+Copy all contents of `site/dist/` into this repository's `co-professor/`
+directory, including the main `index.html`, `editorial.css`, `editorial.js`,
+and `shared/` assets. Preserve the personal homepage's root `index.html`.
+
+The main page includes the local project brief tool and does not collect form submissions.
 No university email address or email contact link is published on the Co-Professor pages.
 
-Two alternative designs are available for comparison without replacing that page:
+Both design comparison URLs remain available:
 
 - https://www.fashengxu.com/co-professor/editorial/
 - https://www.fashengxu.com/co-professor/cinematic/
 
-The command above also rebuilds these previews.
-Copy `site/dist/editorial`, `site/dist/cinematic`, and `site/dist/shared` into
-`co-professor/` together. Preserve the current `co-professor/index.html` until
-a design is selected. The previews use local fonts and licensed Scroll Craft
+The command above also rebuilds these comparison pages. Include
+`site/dist/editorial` and `site/dist/cinematic` when copying the output.
+The pages use local fonts and licensed Scroll Craft
 assets, with no AI requests or form submission service.

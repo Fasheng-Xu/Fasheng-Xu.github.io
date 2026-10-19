@@ -18,16 +18,33 @@
 <div data-sc-root>
   <header class="masthead page-width">
     <a class="wordmark" href="#top">Co-Professor<span>Research &amp; Teaching</span></a>
-    <nav aria-label="Main"><a href="#research">Research</a><a href="#teaching">Teaching</a><a href="#project">Project brief</a></nav>
+    <nav aria-label="Main"><a href="#research">Research</a><a href="#teaching">Teaching</a><a href="#method">Our approach</a><a class="nav-action" href="#project">Build your brief <svg class="link-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></nav>
   </header>
   <main id="main">
     <section class="title-page page-width" id="top" data-sc-act="flow" aria-labelledby="page-title">
-      <h1 id="page-title"><span>AI-accelerated research</span> <span>and teaching, <em>built around you.</em></span></h1>
-      <div class="title-copy" data-sc-in data-sc-stagger="50">
-        <p class="mission">Democratizing access to powerful AI for business professors.</p>
-        <p class="introduction">A personal AI agent bringing advanced models, practical workflows and hands-on guidance to your research and teaching.</p>
-        <a class="text-action" href="#project">Prepare your project</a>
+      <div class="hero-main">
+        <div class="hero-copy">
+          <p class="audience">A personal AI agent for business professors</p>
+          <h1 id="page-title">AI-accelerated research and teaching, <em>built around you.</em></h1>
+          <p class="introduction">Your questions. Your courses. Your way of working. Advanced AI and practical guidance, shaped around the context that matters to you.</p>
+          <div class="hero-actions"><a class="primary-action" href="#project">Build your brief <svg class="link-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><a class="text-action" href="#method">How we work</a></div>
+        </div>
+        <figure class="context-figure" aria-labelledby="context-figure-title">
+          <div class="context-back" aria-hidden="true" data-sc-parallax="-0.12"></div>
+          <div class="context-paper">
+            <p class="figure-label">The starting point</p>
+            <h2 id="context-figure-title">Your work has context.<br> Your AI should too.</h2>
+            <dl class="context-list">
+              <div><dt>Your research</dt><dd>Question, methods, target journal</dd></div>
+              <div><dt>Your teaching</dt><dd>Students, learning goals, materials</dd></div>
+              <div><dt>Your preferences</dt><dd>Writing choices, constraints, decisions</dd></div>
+            </dl>
+            <p class="context-footnote">You choose what to share, what to change and what to carry forward.</p>
+          </div>
+          <figcaption>A shared starting point for research and teaching.</figcaption>
+        </figure>
       </div>
+      <div class="hero-mission"><p class="mission">Democratizing access to powerful AI for business professors.</p><p>Capable models. Directed workflows. Hands-on guidance.</p></div>
     </section>
 
     <section class="research-chapter chapter" id="research" data-sc-act="flow" aria-labelledby="research-title">
@@ -36,22 +53,39 @@
         <p class="chapter-intro">From an analytical model to an empirical study, start with the question you want to answer. Put AI to work on the argument, the evidence and the next version.</p>
         <div class="research-spread">
           <figure class="research-sheet" data-sc-reveal="left" data-sc-reveal-at="0.05 0.23">
-            <div class="sheet-running-head">An example of the work</div>
-            <h3>What would change<br>your conclusion?</h3>
-            <p class="paper-excerpt">The central claim depends on an assumption. Make that dependency visible before making the claim broader.</p>
-            <div class="annotation"><span>For an analytical paper</span><p>Check the derivation and boundary cases. Does the result survive the assumptions used in your example?</p></div>
-            <div class="annotation empirical"><span>For an empirical paper</span><p>Examine the identification argument and alternative explanations. What does the evidence establish, and where does it stop?</p></div>
-            <div class="revision-line"><span>A revision you can act on</span><p>State the condition, connect the evidence to the claim, and prioritize the check that could change the conclusion.</p></div>
-            <figcaption>Illustrative research questions, not a finding about your paper.</figcaption>
+            <div class="sheet-running-head">Inside a Readiness Review <span>Illustrative example</span></div>
+            <h3>A finding you can<br>trace and act on.</h3>
+            <p class="paper-excerpt">A table entry disagrees with the stated expression.</p>
+            <dl class="finding-evidence">
+              <div><dt>Location</dt><dd>Table 2, row 5, at r = 0.4</dd></div>
+              <div><dt>Evidence</dt><dd>Recomputing the expression gives 0.312. The table reports 0.321.</dd></div>
+              <div><dt>Assessment</dt><dd>Fixable · High confidence in this check</dd></div>
+            </dl>
+            <div class="correction"><span class="old-value"><span class="visually-hidden">Reported: </span>0.321</span><span aria-hidden="true">→</span><strong><span class="visually-hidden">Recomputed: </span>0.312</strong></div>
+            <div class="revision-line"><span>The next revision</span><p>Correct the entry, regenerate the table and check the remaining rows against the same expression.</p></div>
+            <figcaption>A synthetic analytical example. It illustrates the format, not a result from a customer's paper.</figcaption>
           </figure>
           <div class="research-prose">
             <article><h3>Go deeper than general feedback.</h3><p>For analytical work, examine assumptions, proofs, comparative statics and numerical results. For empirical work, examine research design, identification, measurement, robustness and interpretation.</p></article>
-            <article><h3>Write for the journal you mean.</h3><p>Get feedback informed by the target journal's published criteria, with ready-to-implement revision strategies. Keep the contribution and intellectual choices yours.</p><p class="journal-line">Management Science · M&amp;SOM · Operations Research · POM · ISR · MIS Quarterly (MISQ)</p></article>
+            <article><h3>Write for the journal you mean.</h3><p>Get feedback informed by the target journal and department's published criteria, with ready-to-implement revision strategies. Keep the contribution and intellectual choices yours.</p><p class="journal-line">Management Science · M&amp;SOM · Operations Research · POM · ISR · MIS Quarterly (MISQ)</p></article>
             <article><h3>Give your proposal a sharper case.</h3><p>Bring a funding proposal into focus: question, significance, work plan and presentation, considered against the funder's stated criteria.</p></article>
             <p class="research-scope">The current automated review workflow accepts analytical LaTeX projects. Empirical papers and other research tasks require an agreed scope and approach.</p>
-            <a class="text-action route-link" href="#project" data-route="analytical">Prepare your project</a>
+            <a class="text-action route-link" href="#project" data-route="analytical">Build your brief</a>
           </div>
         </div>
+        <details class="report-details" id="report">
+          <summary><span>What is in a Readiness Review?</span><span class="disclosure-symbol" aria-hidden="true">+</span></summary>
+          <div class="report-content">
+            <p class="report-intro">A prioritized report, evidence for the findings, and a revision plan you can review. The automated analytical workflow works from the LaTeX source and available figure code.</p>
+            <dl class="deliverables">
+              <div><dt>Readiness and fit</dt><dd>A qualitative assessment, including “not yet” or “consider another venue”. Journal and department fit, contribution, and concerns ranked by severity.</dd></div>
+              <div><dt>Technical checks</dt><dd>Assumptions, derivations, comparative statics and figures. Each finding identifies its location, evidence, confidence and the limits of the check.</dd></div>
+              <div><dt>Citations and submission rules</dt><dd>Bibliographic checks, support for key claims, format requirements and possible backup venues. Always verify the current journal rules.</dd></div>
+              <div><dt>Actionable revision files</dt><dd>A browser-readable report, AI-use disclosure text and a record of review stages. When suggested edits apply, marked-up LaTeX preserves the originals and a diff shows the changes.</dd></div>
+            </dl>
+            <p class="detail-note">For example, a Management Science submission is considered against the department you name. A clean audit does not certify correctness or predict acceptance.</p>
+          </div>
+        </details>
       </div>
     </section>
 
@@ -60,20 +94,22 @@
         <div class="teaching-heading"><p class="chapter-name">Teaching</p><h2 id="teaching-title">Teach the course<br>you want to teach.</h2><p class="chapter-intro">Your students, your learning goals, your way of teaching. Connect the materials you have to the understanding you want them to leave with.</p></div>
         <div class="teaching-spread">
           <div class="teaching-prose">
-            <article><h3>Give the materials a through line.</h3><p>Develop lectures, PowerPoint slides, worked examples and assignments. Shape scattered notes into a coherent teaching package or textbook draft, with a clear sequence and consistent terminology.</p></article>
+            <article><h3>Make the next class work.</h3><p>Develop lectures, PowerPoint slides, worked examples, assignments and rubrics around a clear learning goal.</p></article>
+            <article><h3>Give the course a through line.</h3><p>Shape scattered notes into a coherent teaching package or textbook draft, with a clear sequence, consistent terminology and an instructor guide.</p></article>
             <article><h3>Redesign for a classroom with AI.</h3><p>Decide what students should practice themselves and where AI belongs. Develop activities, assessments and rubrics that ask them to explain and defend their reasoning.</p></article>
             <article><h3>Let students make the decision.</h3><p>Create a custom simulation game with roles, decision rounds and instructor controls. Use the debrief to connect what happened in the room to the ideas in the course.</p></article>
-            <a class="text-action route-link" href="#project" data-route="ai-course">Prepare your project</a>
+            <a class="text-action route-link" href="#project" data-route="ai-course">Build your brief</a>
           </div>
           <figure class="course-figure">
             <div class="course-background" aria-hidden="true"><span></span><span data-sc-parallax="-0.35"></span><span data-sc-parallax="0.3"></span></div>
             <div class="course-outline">
               <p class="figure-label">An MBA operations module</p>
               <h3>From calculating<br>to deciding.</h3>
+              <blockquote class="course-brief">“Students can ask AI to solve the spreadsheet. Can they explain and defend the decision?”</blockquote>
               <ol class="course-sequence">
                 <li><span>Prepare</span><p>A short explanation and a worked example.</p></li>
                 <li><span>Decide</span><p>A supply-chain simulation with competing objectives.</p></li>
-                <li><span>Defend</span><p>An assignment that asks students to explain the tradeoffs.</p></li>
+                <li><span>Defend</span><p>An assignment and rubric that ask students to explain the tradeoffs.</p></li>
                 <li><span>Reflect</span><p>A debrief and an instructor guide with solution checks.</p></li>
               </ol>
             </div>
@@ -85,8 +121,13 @@
 
     <section class="human-chapter chapter" id="method" data-sc-act="flow" aria-labelledby="human-title">
       <div class="page-width human-inner">
-        <h2 id="human-title">The question is yours.<br>So is the judgment.</h2>
-        <p>Use agents for defined tasks, organizing materials and running checks. Inspect the evidence. Learn the workflow as you go. Keep research taste, verification and final decisions in human hands.</p>
+        <div class="method-opening"><h2 id="human-title">Learn the workflow.<br>Keep the judgment.</h2><p>Practical lessons and hands-on guidance, grounded in your own academic work. We help you choose the tools, give them useful context and check what comes back.</p></div>
+        <ol class="method-steps">
+          <li><h3>Start with your goal</h3><p>Define the question, audience and constraints. Decide what a useful result would look like.</p></li>
+          <li><h3>Build the context</h3><p>Choose relevant materials, methods and preferences. Inspect and correct the context before reusing it.</p></li>
+          <li><h3>Work in checkable steps</h3><p>Give agents defined tasks. Examine evidence, test outputs and adjust the workflow as you learn.</p></li>
+          <li><h3>Make the decisions</h3><p>You own the questions, research taste and learning goals. Verify the work and choose what to use.</p></li>
+        </ol>
         <div class="judgment-path">
           <svg viewBox="0 0 1000 24" preserveAspectRatio="none" aria-hidden="true"><path class="path-base" d="M0 12H1000"/><path class="path-draw" pathLength="1" d="M0 12H1000"/></svg>
           <ul><li>Your question</li><li>Directed agents</li><li>Checkable evidence</li><li>Your judgment</li></ul>
@@ -96,7 +137,7 @@
 
     <section class="project-chapter chapter" id="project" data-sc-act="flow" aria-labelledby="project-title">
       <div class="page-width">
-        <div class="project-opening" data-sc-in><h2 id="project-title">Start with your context.<br>Leave with a useful brief.</h2><p class="chapter-intro">Choose a task and make the starting point concrete. This is a local writing tool: it makes no AI request and stores nothing. You decide what to share.</p></div>
+        <div class="project-opening" data-sc-in><h2 id="project-title">What are you<br>working on?</h2><p class="chapter-intro">Choose a task, add your context and leave with an editable project brief. Everything stays in this browser tab. Copy or download it to keep it; nothing is submitted.</p></div>
         <noscript><p class="noscript-note">The interactive brief tool needs JavaScript. To prepare your own brief, note your task, relevant context, available materials and desired outcome.</p></noscript>
         <div class="composer" id="composer" hidden>
           <div class="brief-inputs">
@@ -122,12 +163,24 @@
         </div>
       </div>
     </section>
+    <section class="questions-chapter chapter" id="questions" aria-labelledby="questions-title">
+      <div class="page-width questions-layout">
+        <div><h2 id="questions-title">A few things<br>worth knowing.</h2><p>Your work, your context and your decisions stay central.</p></div>
+        <div class="question-list">
+          <details><summary>What can I use on this website today?</summary><p>The project brief tool helps you organize a research, teaching or funding project. It runs locally, makes no AI request and does not submit a service request. The current automated research engine accepts analytical LaTeX projects. Empirical work, teaching and funding projects require an agreed scope and workflow.</p></details>
+          <details><summary>What does “personal” mean?</summary><p>Your methods, target journals, writing preferences, students and learning goals should shape the work. The aim is context you can inspect, correct and choose to reuse. This website does not create an account or remember your brief after you leave; download a copy to keep it.</p></details>
+          <details><summary>How should I handle confidential materials?</summary><p>Use the brief to describe your materials, rather than pasting documents. Before sharing work for a service, agree the access and retention terms, including provider retention. Human access to a manuscript requires your permission. Research support is for authors and authorized collaborators; manuscripts received in confidence for peer review are not accepted.</p></details>
+          <details><summary>Who verifies the work and makes the decisions?</summary><p>You do. Check proposed revisions, citations, solutions and teaching materials before use. Feedback carries uncertainty and does not certify correctness or predict publication. Follow the AI-disclosure rules of your journal, funder and institution. Co-Professor is independent and is not affiliated with any named journal or institution.</p></details>
+          <details><summary>How do scope, pricing and access work?</summary><p>Scope and pricing need to be agreed for each service. No paid plan or checkout is offered on this page. Access to AI services follows the regions supported by the providers used for the workflow.</p></details>
+        </div>
+      </div>
+    </section>
   </main>
   <footer class="colophon chapter" id="contact" data-sc-act="flow">
     <div class="page-width colophon-inner" data-sc-reveal="up" data-sc-reveal-at="0.02 0.2">
-      <p class="colophon-mission">Powerful tools.<br>More room for human work.</p>
-      <div class="contact-lines"><p>Start with a paper, a course, a proposal, or a workflow you want to learn.</p><p><a class="text-action" href="#project">Prepare your project</a></p><p class="contact-note">Use the brief above to organize your context and next steps. Copy or download it to keep your own record.</p></div>
-      <div class="colophon-bottom"><a class="wordmark" href="#top">Co-Professor</a><p>Personal context. Human direction.<br>Not affiliated with or endorsed by any journal.</p><nav aria-label="Other pages"><a href="https://www.fashengxu.com/">Personal homepage</a><a href="../cinematic/">View cinematic direction</a><a href="../">Current website</a></nav></div>
+      <p class="colophon-mission">More room for the work<br>only you can do.</p>
+      <div class="contact-lines"><p>Bring your next paper, course or question into focus.</p><p><a class="text-action" href="#project">Build your brief <svg class="link-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></p></div>
+      <div class="colophon-bottom"><a class="wordmark" href="#top">Co-Professor</a><p>Research. Teaching. Human judgment.</p><nav aria-label="Footer"><a href="#questions">Questions and service scope</a><a href="https://www.fashengxu.com/">About the founder, Fasheng Xu <svg class="link-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></nav></div>
     </div>
   </footer>
 </div>
