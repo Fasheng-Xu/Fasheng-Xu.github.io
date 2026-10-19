@@ -127,6 +127,13 @@
 
   /* Project brief tool */
 
+  // The tool sits in a closed accordion; links to it open it.
+  var briefDetails = document.getElementById("brief");
+  var openBrief = function () { if (briefDetails && "open" in briefDetails) briefDetails.open = true; };
+  all('a[href="#brief"]').forEach(function (link) { link.addEventListener("click", openBrief); });
+  if (location.hash === "#brief") openBrief();
+  window.addEventListener("hashchange", function () { if (location.hash === "#brief") openBrief(); });
+
   var composer = document.getElementById("composer");
   var briefFallback = document.getElementById("brief-fallback");
   var changeRoute = function () {};

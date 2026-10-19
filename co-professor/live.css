@@ -346,10 +346,12 @@ h4.sheet-running-head { font-weight: 400; }
 .privacy b { color: var(--p-ink); font-weight: 600; }
 
 /* Project brief tool (inside the navy section) */
-.brief-block { margin-top: clamp(70px, 8vw, 110px); padding-top: clamp(50px, 6vw, 80px); border-top: 1px solid var(--p-line); }
-.brief-opening { max-width: 900px; }
-.brief-opening h3 { font: 400 clamp(32px, 3.2vw, 46px)/1.1 var(--font-display); letter-spacing: -.03em; }
-.brief-opening .chapter-intro { max-width: 68ch; color: var(--p-soft); font-size: 16px; }
+.brief-block { margin-top: clamp(64px, 7vw, 96px); border-block: 1px solid var(--p-line); }
+.brief-details > summary { display: flex; align-items: center; justify-content: space-between; gap: 25px; padding: 26px 0; color: var(--p-ink); font: 400 clamp(26px, 2.4vw, 34px)/1.25 var(--font-display); letter-spacing: -.02em; list-style: none; }
+.brief-details > summary::-webkit-details-marker { display: none; }
+.brief-details .disclosure-symbol { color: var(--p-accent); }
+.brief-body { padding-bottom: clamp(36px, 4vw, 56px); }
+.brief-body > .chapter-intro { max-width: 68ch; color: var(--p-soft); font-size: 16px; }
 .composer { display: grid; grid-template-columns: minmax(0, .83fr) minmax(0, 1.15fr); gap: clamp(40px, 6vw, 88px); margin-top: 44px; }
 .task-choice { margin: 0; padding: 0; border: 0; }
 .task-choice legend { margin-bottom: 4px; padding: 0; font: 400 25px/1.2 var(--font-display); }
