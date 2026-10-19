@@ -20,17 +20,18 @@ from that repository, then copy `site/dist/index.html` to
 `co-professor/index.html` in this repository:
 
 ```sh
-python3 site/build_static.py --contact-email fasheng.xu@uconn.edu --home-url https://www.fashengxu.com/
+python3 site/build_static.py --project-brief-url editorial/#project --home-url https://www.fashengxu.com/ --include-design-previews
 ```
 
-The public page uses an email contact link and does not collect form submissions.
+The public page links to the local project brief tool and does not collect form submissions.
+No university email address or email contact link is published on the Co-Professor pages.
 
 Two alternative designs are available for comparison without replacing that page:
 
 - https://www.fashengxu.com/co-professor/editorial/
 - https://www.fashengxu.com/co-professor/cinematic/
 
-To rebuild these previews, add `--include-design-previews` to the command above.
+The command above also rebuilds these previews.
 Copy `site/dist/editorial`, `site/dist/cinematic`, and `site/dist/shared` into
 `co-professor/` together. Preserve the current `co-professor/index.html` until
 a design is selected. The previews use local fonts and licensed Scroll Craft

@@ -112,7 +112,6 @@ figcaption{margin-top:28px;font-size:11px;line-height:1.6;color:var(--sc-ink-sof
 .contact-lines p{font-size:15px;max-width:50ch;color:var(--sc-ink-soft)}
 .contact-lines p+p{margin-top:22px}
 .contact-lines .text-action{font-size:18px}
-.email-address{font-size:13px;display:inline-block;margin-top:10px;text-decoration:none;color:var(--sc-ink)}
 .contact-lines .contact-note{font-size:11px;line-height:1.65}
 .colophon-bottom{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;border-top:1px solid #cbd3e0;padding-top:28px;margin-top:24px;align-items:start}
 .colophon-bottom .wordmark{font-size:22px}

@@ -12,7 +12,6 @@
   var goal = document.getElementById("project-goal");
   var output = document.getElementById("brief-text");
   var status = document.getElementById("brief-status");
-  var email = document.getElementById("email-brief");
   var states = Object.create(null);
   var activeRoute = route.value;
   var dirtyOutput = false;
@@ -38,22 +37,13 @@
     var lines = ["CO-PROFESSOR PROJECT BRIEF", "", "Project: " + task.title, "", task.context + ":", valueOrPrompt(context.value, "Add your context"), ""];
     if (task.kind === "research") lines.push(task.target + ":", valueOrPrompt(target.value, "Add a target, if you have one"), "");
     else lines.push("Students and class time:", valueOrPrompt(students.value, "Add student level and available time"), "");
-    lines.push(task.materials + ":", valueOrPrompt(materials.value, "Describe the materials you could bring"), "", "A useful outcome:", valueOrPrompt(goal.value, task.aim), "", "Working approach:", "Start with relevant context. Use agents for defined, checkable tasks. I retain the intellectual choices, verify outputs, and decide what to use.", "", "Next step:", "Discuss the scope, workflow and materials before any work begins.");
+    lines.push(task.materials + ":", valueOrPrompt(materials.value, "Describe the materials you could bring"), "", "A useful outcome:", valueOrPrompt(goal.value, task.aim), "", "Working approach:", "Start with relevant context. Use agents for defined, checkable tasks. I retain the intellectual choices, verify outputs, and decide what to use.", "", "Next step:", "Define the scope, check the available materials, and choose a workflow before starting.");
     return lines.join("\n");
-  }
-
-  function updateEmail() {
-    var subject = "Co-Professor project: " + tasks[route.value].title;
-    var body = "Hello,\n\nI would like to discuss this project.\n\n" + output.value + "\n\nBest,";
-    var href = "mailto:fasheng.xu@uconn.edu?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
-    email.href = href;
-    document.getElementById("contact-email").href = href;
   }
 
   function regenerate() {
     output.value = makeBrief();
     dirtyOutput = false;
-    updateEmail();
   }
 
   function changeRoute(nextRoute) {
@@ -76,7 +66,7 @@
     document.getElementById("teaching-context").hidden = task.kind !== "teaching";
     document.querySelector('label[for="project-target"]').firstChild.textContent = task.target || "Target journal or funder";
     target.placeholder = nextRoute === "funding" ? "Funder name and call" : "For example, Management Science or MISQ";
-    if (state.output) { output.value = state.output; updateEmail(); }
+    if (state.output) { output.value = state.output; }
     else regenerate();
     status.textContent = "";
     if (window.ScrollCraft && window.ScrollCraft.instances[0]) window.ScrollCraft.instances[0].layout();
@@ -91,7 +81,7 @@
       else status.textContent = "Your brief has personal edits. Choose Update your brief to rebuild it from the fields.";
     });
   });
-  output.addEventListener("input", function () { dirtyOutput = true; updateEmail(); status.textContent = "Your edits are included in copy, download and email draft."; });
+  output.addEventListener("input", function () { dirtyOutput = true; status.textContent = "Your edits are included when you copy or download the brief."; });
   document.getElementById("update-brief").addEventListener("click", function () { regenerate(); status.textContent = "Brief updated from your selected task and context."; });
   document.getElementById("copy-brief").addEventListener("click", async function () {
     try {
@@ -115,7 +105,6 @@
     setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
     status.textContent = "A text-file download was requested. Nothing was sent.";
   });
-  email.addEventListener("click", function () { updateEmail(); status.textContent = "Opening a draft in your email app. Review it there and choose whether to send."; });
   document.querySelectorAll("[data-route]").forEach(function (link) {
     link.addEventListener("click", function () { changeRoute(link.getAttribute("data-route")); });
   });

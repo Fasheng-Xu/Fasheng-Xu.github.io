@@ -11,10 +11,11 @@
   const summary = document.getElementById("decision-summary");
   const totalOutput = document.getElementById("total-cost");
   const caseSelect = document.getElementById("case-select");
+  const downloadButton = document.getElementById("download-case");
 
   // Preserve the worked example if the interactive markup is incomplete.
   if (![controls, fallback, orderSelect, revealButton, resetButton, roundLabel,
-    results, summary, totalOutput, caseSelect].every(Boolean)) {
+    results, summary, totalOutput, caseSelect, downloadButton].every(Boolean)) {
     return;
   }
 
@@ -22,7 +23,6 @@
   const orderOptions = [20, 40, 60, 80];
   const rounds = [];
   let hasTeachingIntent = false;
-  const inquiryLinks = document.querySelectorAll("[data-inquiry]");
   const inquiryContext = document.getElementById("inquiry-context");
   const initialButtonLabel = revealButton.textContent.trim() || "Reveal demand";
   const dollars = (value) => "$" + value.toLocaleString("en-US");
@@ -36,55 +36,57 @@
     return option ? option.textContent.trim() : "MBA operations";
   };
 
-  function updateInquiryLinks() {
+  function buildTeachingSummary() {
     const body = [
-      "Hello Fasheng,",
+      "Co-Professor teaching example",
+      "Teaching context: " + selectedCase(),
       "",
-      "I would like to discuss a Co-Professor project.",
+      "Local illustrative inventory demo:",
+      "This fixed, three-round teaching example runs locally in the browser. " +
+        "These are illustrative decisions and outcomes, not a live business forecast.",
+      "Cost rule: $2 per unit ordered plus $5 per unit of unfilled demand.",
+      "Unsold units have no recovery value. Every round starts fresh.",
+      "Fixed demand sequence: 30, 70, 50 units.",
+      "",
     ];
-
-    if (hasTeachingIntent) {
-      body.push(
-        "Teaching context: " + selectedCase(),
-        "",
-        "Local illustrative inventory demo:",
-        "This fixed, three-round teaching example runs locally in the browser. " +
-          "These are illustrative decisions and outcomes, not a live business forecast.",
-        "Cost rule: $2 per unit ordered plus $5 per unit of unfilled demand.",
-        "",
-      );
-      if (rounds.length === 0) {
-        body.push("No rounds completed yet.");
-      } else {
-        rounds.forEach((round, index) => {
-          body.push(
-            "Round " + (index + 1) + ": ordered " + round.order +
-            ", demand " + round.demand + ", left over " + round.leftover +
-            ", unfilled " + round.unfilled + ", cost " + dollars(round.cost) + "."
-          );
-        });
-      }
-
-      body.push("Total cost so far: " + dollars(totalCost()) + ".");
-      if (rounds.length < demandSequence.length) {
-        body.push("Selected order for round " + (rounds.length + 1) + ": " + selectedOrder() + ".");
-      }
+    if (rounds.length === 0) {
+      body.push("No rounds completed yet.");
+    } else {
+      rounds.forEach((round, index) => {
+        body.push(
+          "Round " + (index + 1) + ": ordered " + round.order +
+          ", demand " + round.demand + ", left over " + round.leftover +
+          ", unfilled " + round.unfilled + ", cost " + dollars(round.cost) + "."
+        );
+      });
     }
-    body.push("", hasTeachingIntent ? "My teaching goal:" : "My project goal:", "");
+    body.push("Total cost so far: " + dollars(totalCost()) + ".");
+    if (rounds.length < demandSequence.length) {
+      body.push("Selected order for round " + (rounds.length + 1) + ": " + selectedOrder() + ".");
+    }
+    body.push("", "Teaching goal:", "", "Debrief: What trade-off explains your decisions?", "");
+    return body.join("\n");
+  }
 
+  function updateTeachingContext() {
     if (inquiryContext) {
       inquiryContext.textContent = hasTeachingIntent
         ? "Teaching example selected: " + selectedCase() + ". " + rounds.length +
           " classroom round" + (rounds.length === 1 ? "" : "s") + " completed."
         : "Research, teaching or a funding proposal.";
     }
+  }
 
-    const href = "mailto:fasheng.xu@uconn.edu?subject=" +
-      encodeURIComponent("Co-Professor project enquiry") +
-      "&body=" + encodeURIComponent(body.join("\n"));
-    inquiryLinks.forEach((link) => {
-      link.setAttribute("href", href);
-    });
+  function downloadTeachingExample() {
+    const blob = new Blob([buildTeachingSummary()], { type: "text/plain;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "co-professor-teaching-example.txt";
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
   }
 
   function addResult(round) {
@@ -134,7 +136,7 @@
       summary.textContent = outcome +
         "What would justify your next order given the cost of leftover units and unfilled demand?";
     }
-    updateInquiryLinks();
+    updateTeachingContext();
   }
 
   function resetDemo() {
@@ -148,12 +150,12 @@
     totalOutput.textContent = "$0";
     summary.textContent = "Choose an order quantity, then reveal demand. " +
       "Each reset repeats the same three demands. What trade-off informs your first choice?";
-    updateInquiryLinks();
+    updateTeachingContext();
   }
 
   function selectTeachingContext() {
     hasTeachingIntent = true;
-    updateInquiryLinks();
+    updateTeachingContext();
   }
 
   orderSelect.addEventListener("change", selectTeachingContext);
@@ -161,7 +163,9 @@
   revealButton.addEventListener("click", revealDemand);
   resetButton.addEventListener("click", resetDemo);
 
+  downloadButton.addEventListener("click", downloadTeachingExample);
   resetDemo();
+  downloadButton.hidden = false;
   fallback.hidden = true;
   controls.hidden = false;
 })();
