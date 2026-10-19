@@ -19,7 +19,7 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23f1f3f6'/%3E%3Ctext x='12' y='48' font-family='Georgia,serif' font-size='48' fill='%23244ed1'%3EC%3C/text%3E%3C/svg%3E">
   <link rel="preload" href="fonts/stix-two-text.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="live.css?v=e75a5a172f">
+  <link rel="stylesheet" href="live.css?v=7b01ddecea">
   <script src="live.js?v=031b5e26c1" defer></script>
 </head>
 <body>
@@ -84,8 +84,9 @@
           <a class="text-action route-link" href="#pilot">Request a research pilot</a>
         </div>
       </div>
-      <div class="review-build" id="inside-review">
-        <div class="sheet-running-head">Inside a Readiness Review <span>Full review of an analytical paper in LaTeX</span></div>
+      <details class="report-details build-details" id="inside-review">
+        <summary><span id="inside-title">Inside a Readiness Review: 18 stages, 13 agents</span><span class="disclosure-symbol" aria-hidden="true"></span></summary>
+        <div class="report-content review-build">
         <div class="build-opening">
           <h3 id="build-title"><span>Thirteen agents, one job each.</span> <span>Three of them test other agents' work.</span></h3>
           <p class="build-lead">A full Readiness Review is not one long prompt. It runs 18 stages: 13 AI agents, each with its own written method and only the tools its job needs, and 5 steps of plain code. What matters is what happens to each point before it reaches you.</p>
@@ -178,7 +179,8 @@
           </dl>
         </div>
         <p class="build-pointer">The example below follows three findings through these stages: one dropped, one kept and one merged.</p>
-      </div>
+        </div>
+      </details>
       <details class="report-details trace-details" id="review-example">
         <summary><span id="trace-title">An illustrative example, followed stage by stage</span><span class="disclosure-symbol" aria-hidden="true"></span></summary>
         <div class="report-content">
@@ -232,9 +234,9 @@
           <p class="detail-note">For example, a Management Science submission is read against the department you name. A clean audit does not certify correctness or predict acceptance.</p>
         </div>
       </details>
-      <a class="text-action route-link" href="#pilot" data-preselect="analytical">Request a paper review pilot</a>
-      <aside class="rr-pilot" id="rr-pilot" aria-labelledby="rr-title">
-        <div class="sheet-running-head">After a revise-and-resubmit <span>Optional pilot, outside the review engine</span></div>
+      <details class="report-details rr-details" id="rr-pilot">
+        <summary><span id="rr-summary">After a revise-and-resubmit: an optional pilot</span><span class="disclosure-symbol" aria-hidden="true"></span></summary>
+        <div class="report-content rr-pilot">
         <div class="rr-intro">
           <h3 id="rr-title">Two opposing plans for each major concern.</h3>
           <p>When a journal invites a revision, the question becomes how far to go on each concern. We run this workflow as a pilot today, following the founder's own method for planning a revision. It is separate from the Readiness Review engine, which has no revise-and-resubmit mode.</p>
@@ -247,7 +249,9 @@
           <li><h4><span class="bm-step">03</span> Weigh</h4><p>The two plans are set against each other and reconciled into one recommended response. Minor concerns get a single, direct pass.</p></li>
           <li><h4><span class="bm-step">04</span> You decide</h4><p>You receive a memo, concern by concern, with suggested edits. Nothing is applied to your paper, and every choice stays yours.</p></li>
         </ol>
-      </aside>
+        </div>
+      </details>
+      <a class="text-action route-link" href="#pilot" data-preselect="analytical">Request a paper review pilot</a>
     </div>
   </section>
 
