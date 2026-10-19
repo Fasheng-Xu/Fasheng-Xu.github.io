@@ -18,14 +18,13 @@ button,a{transition:color 150ms ease-out,background-color 150ms ease-out,opacity
 .wordmark span{display:block;font:400 11px/1.6 var(--sc-font-text);letter-spacing:.12em;text-transform:uppercase;margin-top:6px}
 .masthead nav{display:flex;align-items:center;gap:28px;font-size:13px}
 .masthead nav a{color:var(--sc-ink);text-decoration:none}
-.title-page{padding-top:clamp(44px,5.5vw,80px);padding-bottom:0}
+.title-page{padding-top:clamp(44px,5.5vw,80px);padding-bottom:64px}
 h1,h2,h3,p,figure,blockquote{margin:0}
 h1,h2,h3{text-wrap:balance}
 h1{font:400 clamp(48px,5.2vw,74px)/1.035 var(--sc-font-display);letter-spacing:-.047em;max-width:850px}
 h1 span{display:block}
 h1 em{font-style:normal;color:var(--sc-accent)}
 .title-copy{margin-top:40px;max-width:900px}
-.mission{font-size:17px;font-weight:600;line-height:1.5}
 .introduction{margin-top:10px;max-width:65ch;font-size:17px;color:var(--sc-ink-soft);line-height:1.65}
 .text-action{display:inline-block;font-weight:600;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:7px}
 .title-copy .text-action{margin-top:26px;font-size:16px}
@@ -123,8 +122,8 @@ html:not(.sc-ready) [data-sc-in],html:not(.sc-ready) [data-sc-stagger]>*{opacity
 @media(hover:hover) and (pointer:fine){a:hover{color:#122a85}.project-chapter a:hover,.project-chapter button:hover{color:#fff}.update-brief:hover{background:#fff!important;color:#172338!important}.masthead nav a:hover{text-decoration:underline}.brief-actions button:hover{border-color:#fff}}
 @media(min-width:1500px){h1{font-size:76px}}
 @media(max-width:1100px){h1{font-size:clamp(48px,5.3vw,64px)}.research-spread{gap:42px}.teaching-spread{gap:40px}.teaching-heading{margin-left:0}.annotation{grid-template-columns:1fr;gap:6px}.course-sequence li{grid-template-columns:1fr;gap:4px}.composer{gap:38px}.brief-caption{display:block}.brief-caption span{display:block;margin-top:7px}}
-@media(max-width:760px){body{font-size:16px}.masthead{padding-top:24px;padding-bottom:20px;align-items:start}.wordmark{font-size:24px}.wordmark span{font-size:9px}.masthead nav{gap:10px 18px;flex-wrap:wrap;max-width:145px;justify-content:flex-end;font-size:11px}.title-page{padding-top:35px;padding-bottom:64px}h1{font-size:clamp(44px,7.5vw,62px);line-height:1.04;letter-spacing:-.045em}h1 span{display:inline}.title-copy{margin-top:28px}.mission{font-size:18px;line-height:1.5}.introduction{font-size:15px}.title-copy .text-action{margin-top:22px;font-size:14px}.chapter-name{font-size:11px;margin-bottom:20px}h2{font-size:42px}.chapter-intro{font-size:16px;margin-top:20px}.research-spread,.teaching-spread{grid-template-columns:1fr;gap:35px;margin-top:36px}.research-sheet{max-width:600px}.research-prose{padding:0}.research-prose article+article{margin-top:26px}.research-prose h3,.teaching-prose h3{font-size:19px}.research-prose p,.teaching-prose p{font-size:15px;line-height:1.75}.annotation{grid-template-columns:100px minmax(0,1fr);gap:13px}.teaching-heading{margin-left:0}.teaching-spread{display:flex;flex-direction:column}.teaching-prose{padding:0}.course-figure{width:100%;max-width:580px;padding-left:15px}.course-outline{padding:28px}.course-sequence li{grid-template-columns:70px minmax(0,1fr);gap:14px}.human-inner h2{font-size:39px}.human-inner>p{font-size:15px}.judgment-path ul{font-size:10px;line-height:1.45;gap:12px}.project-opening h2{font-size:41px}.composer{grid-template-columns:1fr;gap:38px;margin-top:35px;min-height:0}.brief-caption{display:flex}.brief-caption span{margin:0}.composer #brief-text{min-height:520px}.colophon-inner{grid-template-columns:1fr;gap:30px}.colophon-mission{font-size:40px}.colophon-bottom{grid-template-columns:1fr 1fr;gap:22px}.colophon-bottom .wordmark{grid-column:1/-1}.colophon{padding-top:55px}.contact-lines p{font-size:14px}}
-@media(max-width:380px){h1{font-size:42px}.masthead nav{max-width:128px;gap:9px 12px}.mission{font-size:17px}.title-page{padding-top:28px}.annotation{grid-template-columns:1fr;gap:6px}.course-outline{padding:24px}.course-sequence li{grid-template-columns:1fr;gap:4px}.brief-caption{display:block}.brief-caption span{margin-top:7px}.brief-actions{gap:12px 16px}.brief-actions button,.brief-actions a{font-size:12px}.colophon-bottom{grid-template-columns:1fr}.colophon-bottom .wordmark{grid-column:auto}}
+@media(max-width:760px){body{font-size:16px}.masthead{padding-top:24px;padding-bottom:20px;align-items:start}.wordmark{font-size:24px}.wordmark span{font-size:9px}.masthead nav{gap:10px 18px;flex-wrap:wrap;max-width:145px;justify-content:flex-end;font-size:11px}.title-page{padding-top:35px;padding-bottom:64px}h1{font-size:clamp(44px,7.5vw,62px);line-height:1.04;letter-spacing:-.045em}h1 span{display:inline}.title-copy{margin-top:28px}.introduction{font-size:15px}.title-copy .text-action{margin-top:22px;font-size:14px}.chapter-name{font-size:11px;margin-bottom:20px}h2{font-size:42px}.chapter-intro{font-size:16px;margin-top:20px}.research-spread,.teaching-spread{grid-template-columns:1fr;gap:35px;margin-top:36px}.research-sheet{max-width:600px}.research-prose{padding:0}.research-prose article+article{margin-top:26px}.research-prose h3,.teaching-prose h3{font-size:19px}.research-prose p,.teaching-prose p{font-size:15px;line-height:1.75}.annotation{grid-template-columns:100px minmax(0,1fr);gap:13px}.teaching-heading{margin-left:0}.teaching-spread{display:flex;flex-direction:column}.teaching-prose{padding:0}.course-figure{width:100%;max-width:580px;padding-left:15px}.course-outline{padding:28px}.course-sequence li{grid-template-columns:70px minmax(0,1fr);gap:14px}.human-inner h2{font-size:39px}.human-inner>p{font-size:15px}.judgment-path ul{font-size:10px;line-height:1.45;gap:12px}.project-opening h2{font-size:41px}.composer{grid-template-columns:1fr;gap:38px;margin-top:35px;min-height:0}.brief-caption{display:flex}.brief-caption span{margin:0}.composer #brief-text{min-height:520px}.colophon-inner{grid-template-columns:1fr;gap:30px}.colophon-mission{font-size:40px}.colophon-bottom{grid-template-columns:1fr 1fr;gap:22px}.colophon-bottom .wordmark{grid-column:1/-1}.colophon{padding-top:55px}.contact-lines p{font-size:14px}}
+@media(max-width:380px){h1{font-size:42px}.masthead nav{max-width:128px;gap:9px 12px}.title-page{padding-top:28px}.annotation{grid-template-columns:1fr;gap:6px}.course-outline{padding:24px}.course-sequence li{grid-template-columns:1fr;gap:4px}.brief-caption{display:block}.brief-caption span{margin-top:7px}.brief-actions{gap:12px 16px}.brief-actions button,.brief-actions a{font-size:12px}.colophon-bottom{grid-template-columns:1fr}.colophon-bottom .wordmark{grid-column:auto}}
 @media(prefers-reduced-motion:reduce){[data-sc-in],[data-sc-stagger]>*{opacity:1!important;transform:none!important;transition:opacity 120ms ease-out!important}[data-sc-parallax]{transform:none!important}[data-sc-reveal]{clip-path:none!important}.path-draw{stroke-dashoffset:0}html{scroll-behavior:auto}}
 
 /* Selected editorial homepage: a quieter title, useful examples and clear routes. */
@@ -151,8 +150,12 @@ p { text-wrap: pretty; }
 .context-list dd { font-size: 13px; margin: 4px 0 0; line-height: 1.6; color: var(--sc-ink-soft); }
 .context-footnote { font: 400 16px/1.5 var(--sc-font-display); margin-top: 15px; }
 .context-figure figcaption { margin: 15px 0 0 4px; font-size: 11px; }
-.hero-mission { display: flex; align-items: baseline; justify-content: space-between; gap: 18px 40px; border-top: 1px solid #cbd3e0; padding: 25px 0 28px; margin-top: 60px; }
-.hero-mission > p:last-child { font-size: 12px; color: var(--sc-ink-soft); text-align: right; }
+.mission-band { background: var(--sc-accent); color: #fff; padding-block: clamp(40px, 4.2vw, 60px); }
+.mission-inner { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr); align-items: center; gap: clamp(40px, 6vw, 88px); }
+.mission-band h2 { max-width: 30ch; font: 400 clamp(34px, 3.3vw, 48px)/1.12 var(--sc-font-display); letter-spacing: -.025em; text-wrap: balance; }
+.mission-support { border-left: 1px solid #9eb5ff; padding-left: 32px; font-size: 17px; line-height: 1.6; }
+.mission-support span { display: block; }
+.mission-support span + span { margin-top: 7px; }
 .sheet-running-head { display: flex; justify-content: space-between; gap: 12px; font-size: 10px; }
 .sheet-running-head span { text-transform: none; letter-spacing: 0; }
 .finding-evidence { margin: 24px 0 0; }
@@ -206,9 +209,6 @@ summary { cursor: pointer; }
 @media (max-width:1100px) {
   .hero-main { grid-template-columns: 1.2fr 1fr; gap: 36px; }
   .context-paper { padding: 26px; }
-  .hero-mission { align-items: start; }
-  .hero-mission .mission { max-width: 40ch; }
-  .hero-mission > p:last-child { max-width: 30ch; }
   .method-opening { gap: 40px; }
   .method-steps { gap: 22px; }
   .questions-layout { gap: 55px; }
@@ -230,7 +230,7 @@ summary { cursor: pointer; }
   .masthead nav a { display: inline-flex; align-items: center; min-height: 44px; }
   .masthead nav .nav-action { padding: 0; color: var(--sc-accent); background: none; margin-left: auto; }
   .nav-action .link-arrow { display: none; }
-  .title-page { padding-top: 36px; padding-bottom: 0; }
+  .title-page { padding-top: 36px; padding-bottom: 40px; }
   .hero-main { grid-template-columns: 1fr; gap: 34px; }
   .audience { font-size: 11px; margin-bottom: 20px; }
   h1 { font-size: clamp(43px, 8vw, 60px); line-height: 1.04; max-width: 650px; }
@@ -246,9 +246,10 @@ summary { cursor: pointer; }
   .context-list dd { margin-top: 0; font-size: 12px; }
   .context-footnote { font-size: 15px; margin-top: 10px; }
   .context-figure figcaption { font-size: 10px; }
-  .hero-mission { display: block; margin-top: 36px; padding-block: 24px; }
-  .hero-mission .mission { font-size: 16px; max-width: 38ch; }
-  .hero-mission > p:last-child { margin-top: 8px; text-align: left; max-width: none; font-size: 11px; }
+  .mission-inner { grid-template-columns: 1fr; gap: 26px; }
+  .mission-band h2 { max-width: 23ch; font-size: clamp(32px, 8.5vw, 40px); }
+  .mission-support { padding: 22px 0 0; border-left: 0; border-top: 1px solid #9eb5ff; font-size: 15px; }
+  .mission-support span + span { margin-top: 5px; }
   .sheet-running-head { font-size: 9px; flex-wrap: wrap; }
   .finding-evidence div { grid-template-columns: 76px 1fr; gap: 12px; }
   .finding-evidence dd { font-size: 13px; }
