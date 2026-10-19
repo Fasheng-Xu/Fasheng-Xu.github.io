@@ -185,6 +185,21 @@ details[open] > summary .disclosure-symbol::before { content: "\2212"; }
 .judgment-path ul { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 30px; margin: 8px 0 0; padding: 0; color: var(--ink-soft); font-size: 13px; list-style: none; }
 .method-format { max-width: 70ch; margin-top: 36px; color: var(--ink); font-size: 16px; }
 
+/* Pilot pricing */
+.pricing-chapter { border-top: 1px solid var(--hairline); }
+.pricing-opening { max-width: 900px; }
+.pricing-opening h2 { font-size: clamp(36px, 3.7vw, 54px); }
+.pricing-list { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 30px clamp(24px, 2.6vw, 40px); margin: 50px 0 0; padding: 0; list-style: none; }
+.pricing-list li { display: flex; flex-direction: column; padding-top: 20px; border-top: 2px solid var(--accent); }
+.pricing-list h3 { font: 600 16px/1.35 var(--font-text); letter-spacing: -.005em; }
+.pricing-list .price { margin-top: 14px; color: var(--ink); font: 400 clamp(40px, 3.4vw, 50px)/1.05 var(--font-display); letter-spacing: -.03em; font-variant-numeric: lining-nums; }
+.pricing-list .price-from { font-size: .5em; letter-spacing: 0; vertical-align: .3em; color: var(--ink-soft); }
+.pricing-list .price-quoted { color: var(--ink-soft); }
+.pricing-list .price-unit { margin-top: 6px; color: var(--ink-soft); font-size: 14px; }
+.pricing-list p:last-child { margin-top: 16px; color: var(--ink-soft); font-size: 15px; line-height: 1.7; }
+.pricing-note { max-width: 70ch; margin-top: 40px; color: var(--ink); font-size: 16px; line-height: 1.6; }
+.pricing-note .text-action { margin-left: 8px; }
+
 /* How this differs */
 .differs-chapter { background: var(--surface); border-top: 1px solid var(--hairline); }
 .differs-opening { max-width: 900px; }
@@ -310,6 +325,7 @@ details[open] > summary .disclosure-symbol::before { content: "\2212"; }
 }
 
 @media (max-width: 1100px) {
+  .pricing-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .hero-main { grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 36px; }
   .context-paper { padding: 26px; }
   .research-spread { gap: 42px; }
@@ -395,6 +411,8 @@ details[open] > summary .disclosure-symbol::before { content: "\2212"; }
   .method-steps li::before { margin-bottom: 12px; }
   .differs-opening h2 { font-size: 36px; }
   .differs-list { margin-top: 36px; }
+  .pricing-list { grid-template-columns: minmax(0, 1fr); margin-top: 36px; max-width: 70ch; }
+  .pricing-opening h2 { font-size: 36px; }
   .differs-list p { font-size: 15px; }
   .pilot-opening h2 { font-size: 41px; }
   .pilot-opening .chapter-intro { font-size: 16px; }
@@ -456,5 +474,5 @@ details[open] > summary .disclosure-symbol::before { content: "\2212"; }
   .chapter, .mission-band, .title-page { padding-block: 28px; }
   .pilot-chapter { --p-ink: var(--ink); --p-soft: var(--ink-soft); --p-accent: var(--accent); --p-line: var(--hairline); background: #fff; color: var(--ink); color-scheme: light; }
   .pilot-layout { grid-template-columns: minmax(0, 1fr); margin-top: 24px; }
-  .research-sheet, .context-figure, .course-figure, .privacy, .rules-list div, .differs-list li, .method-steps li, details { break-inside: avoid; }
+  .research-sheet, .context-figure, .course-figure, .privacy, .rules-list div, .differs-list li, .pricing-list li, .method-steps li, details { break-inside: avoid; }
 }
