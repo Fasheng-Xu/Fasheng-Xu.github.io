@@ -3,126 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="A personal AI agent for business professors. Guided research and teaching workflows, shaped by your context and judgment.">
-  <meta name="theme-color" content="#101d31">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Cpath fill=%27%23101d31%27 d=%27M0 0h32v32H0z%27/%3E%3Cpath fill=%27%23f4f3ee%27 d=%27M8 5h12l5 5v17H8z%27/%3E%3Cpath fill=%27none%27 stroke=%27%23101d31%27 d=%27M12 14h9m-9 4h9m-9 4h6%27/%3E%3C/svg%3E">
-  <title>Co-Professor | Research and teaching, built around you</title>
-  <link rel="preload" href="../shared/display.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="../shared/text.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="../shared/scrollcraft.css?v=e19eb3aa73b09446">
-  <link rel="stylesheet" href="cinematic.css?v=853636b600ebaacb">
-  <script defer src="../shared/scrollcraft.js?v=4a419b3ede51f647"></script>
-  <script defer src="cinematic.js?v=ef177211dda0ae28"></script>
-  <script defer src="simulation.js?v=0a83e107c8d1a70e"></script>
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="../">
+  <title>Co-Professor</title>
+  <script>
+    const destination = new URL("../", window.location.href);
+    destination.search = window.location.search;
+    destination.hash = window.location.hash;
+    window.location.replace(destination.href);
+  </script>
+  <noscript><meta http-equiv="refresh" content="0;url=../"></noscript>
 </head>
-<body>
-<a class="skip" href="#collection">Skip to the collection</a>
-<header class="indexbar">
-  <a class="wordmark" href="#paper">Co-Professor<span>A personal AI agent</span></a>
-  <nav aria-label="Collection index">
-    <a href="#research">Research</a><a href="#teaching">Teaching</a><a href="#classroom">Try a lesson</a><a href="#inquiry">Your project</a>
-  </nav>
-</header>
-<main id="collection">
-  <section class="hero" id="paper" aria-labelledby="hero-title" data-sc-act="flow">
-    <div class="hero-room" aria-hidden="true">
-      <picture><source media="(max-width:700px)" srcset="../shared/studio-mobile.webp"><img src="../shared/studio-wide.webp" width="1672" height="941" alt="" fetchpriority="high"></picture>
-    </div>
-    <div class="hero-object">
-      <div class="paper-edge edge-back" aria-hidden="true"></div>
-      <div class="paper-edge edge-front" aria-hidden="true"></div>
-      <div class="hero-paper">
-        <p class="material-label">For business professors</p>
-        <h1 id="hero-title">AI-accelerated research and teaching, <em>built around you.</em></h1>
-        <p class="mission">Democratizing access to powerful AI for business professors.</p>
-        <a class="action" href="#research">Explore the services <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a>
-      </div>
-    </div>
-    <p class="hero-caption">A paper. A course. A question worth pursuing.</p>
-  </section>
-
-  <section id="research" class="research object-section" aria-labelledby="research-title" data-sc-act="flow">
-    <div class="section-heading"><h2 id="research-title">Your next paper,<br>examined closely.</h2><p>Analytical and empirical research. Constructive feedback, followed by a revision you can act on.</p></div>
-    <div class="research-layout">
-      <figure class="research-specimen" data-sc-reveal="up" data-sc-reveal-at="0.04 0.22">
-        <div class="specimen-heading"><span>Working paper</span><span>Illustrative questions</span></div>
-        <div class="claim"><p class="specimen-label">Analytical claim</p><p class="specimen-title">Does the optimum<br>hold as stated?</p><p class="equation">∂π / ∂p = 0</p><p class="annotation">A first-order condition is a starting point. Check curvature, boundaries and the stated assumptions.</p></div>
-        <div class="empirical-note"><p class="specimen-label">Empirical claim</p><p class="specimen-title small">Effect, or selection?</p><p class="annotation">Connect identification, measurement and robustness to what the evidence can support.</p></div>
-        <figcaption>Illustrative review questions, not a review of a submitted paper.</figcaption>
-      </figure>
-      <div class="research-label">
-        <dl class="work-list">
-          <div><dt>Analytical work</dt><dd>Examine mathematical derivations, proofs, model logic, comparative statics and numerical results.</dd></div>
-          <div><dt>Empirical work</dt><dd>Challenge research design, identification, measurement, robustness and interpretation.</dd></div>
-          <div><dt>Journal &amp; revision</dt><dd>Assess journal-specific fit and positioning. Prioritize concerns, check citations and shape a revision plan.</dd></div>
-          <div><dt>Funding proposals</dt><dd>Develop the question, significance and work plan against the funder's criteria. Keep the intellectual choices with you.</dd></div>
-        </dl>
-        <p class="scope-note">The current automated Readiness Review accepts LaTeX projects and focuses on analytical OM, IS and OR papers. We agree the scope and workflow for empirical work and other formats.</p>
-      </div>
-    </div>
-    <div class="journal-label"><p>Journal-specific context</p><ul aria-label="Journal range"><li>Management Science</li><li>M&amp;SOM</li><li>Operations Research</li><li>POM</li><li>ISR</li><li>MISQ</li></ul><p class="small-note">Named journals describe the range of discussion, not affiliation or endorsement. Always check current journal rules.</p></div>
-  </section>
-
-  <section id="teaching" class="teaching object-section" aria-labelledby="teaching-title" data-sc-act="pan" data-sc-span="1.85">
-    <div class="teaching-stage" data-sc-stage>
-      <div class="section-heading"><h2 id="teaching-title">The course you<br>want to teach.</h2><p>From a single lecture to a coherent course. Start with what students should understand and do.</p></div>
-      <div class="portfolio-window" tabindex="0" role="region" aria-label="Teaching collection, browse horizontally">
-        <div class="portfolio" data-sc-pan="0">
-          <figure class="portfolio-object">
-            <div class="artifact artifact-slide"><p class="artifact-kicker">Lecture / assignment</p><h3>Make a decision.<br>Explain your reasoning.</h3><div class="decision-diagram" aria-hidden="true"><span>Evidence</span><i aria-hidden="true">/</i><span>Choice</span><i aria-hidden="true">/</i><span>Defense</span></div><p>A worked example is useful.<br>A question that tests understanding is better.</p></div>
-            <figcaption><h3>Lectures, PPT &amp; assignments</h3><dl><div><dt>Material</dt><dd>Your slides, examples and learning goals</dd></div><div><dt>Work</dt><dd>Build lectures, assignments, solutions and rubrics</dd></div><div><dt>Review</dt><dd>Check accuracy and alignment with the goals</dd></div></dl></figcaption>
-          </figure>
-          <figure class="portfolio-object">
-            <div class="artifact artifact-book"><div class="book-spine" aria-hidden="true"></div><p class="artifact-kicker">A coherent teaching package</p><h3>One course.<br>A clear through-line.</h3><ol><li>Question &amp; context</li><li>Concept &amp; model</li><li>Practice &amp; feedback</li><li>Transfer &amp; reflection</li></ol></div>
-            <figcaption><h3>Course package or textbook</h3><dl><div><dt>Material</dt><dd>Scattered notes, slides and exercises</dd></div><div><dt>Work</dt><dd>Create a sequence, consistent language and guide</dd></div><div><dt>Review</dt><dd>Check coherence from one module to the next</dd></div></dl></figcaption>
-          </figure>
-          <figure class="portfolio-object">
-            <div class="artifact artifact-redesign"><p class="artifact-kicker">AI course redesign</p><h3>What should AI do?<br>What should students own?</h3><div class="redesign-columns"><div><h4>Delegate</h4><p>Generate alternatives<br>Draft a first pass<br>Run a defined check</p></div><div><h4>Defend</h4><p>Choose the question<br>Interpret the evidence<br>Explain the decision</p></div></div></div>
-            <figcaption><h3>Redesign for the AI era</h3><dl><div><dt>Material</dt><dd>Your assessments and AI-use expectations</dd></div><div><dt>Work</dt><dd>Rework activities around reasoning and judgment</dd></div><div><dt>Review</dt><dd>Decide what students must practice themselves</dd></div></dl></figcaption>
-          </figure>
-          <figure class="portfolio-object">
-            <div class="artifact artifact-game"><p class="artifact-kicker">Classroom simulation</p><h3>A choice with<br>consequences.</h3><div class="game-diagram" aria-hidden="true"><span>Order</span><span>Demand</span><span>Debrief</span></div><p>Roles. Decision rounds.<br>A discussion that brings the model to life.</p></div>
-            <figcaption><h3>Custom simulation games</h3><dl><div><dt>Material</dt><dd>Your subject, students and class time</dd></div><div><dt>Work</dt><dd>Build roles, decisions, controls and a debrief</dd></div><div><dt>Review</dt><dd>Test the rules and connect play to the concepts</dd></div></dl></figcaption>
-          </figure>
-        </div>
-      </div>
-      <p class="portfolio-note">Illustrative teaching materials. <a href="#classroom">Try a small classroom example below.</a></p>
-    </div>
-  </section>
-
-  <section id="classroom" class="classroom object-section" aria-labelledby="classroom-title" data-sc-act="flow">
-    <div class="section-heading" data-sc-in><h2 id="classroom-title">A decision your<br>students can defend.</h2><p>A local inventory teaching example. Order before demand is revealed, inspect the consequences, then ask why.</p></div>
-    <div class="simulation-shell">
-      <div class="simulation-rules">
-        <p class="material-label">Example / uncertain demand</p>
-        <h3>How much<br>is enough?</h3>
-        <p>Order costs $2 per unit. Each unit of unfilled demand adds a $5 penalty. Unsold units have no recovery value. Every round starts fresh.</p>
-        <p class="cost-equation">Cost = $2 × order<br>+ $5 × unfilled demand</p>
-        <details><summary>Instructor note &amp; fixed demand sequence</summary><p>Demand is 30, then 70, then 50 units. Every reset repeats this sequence. This simplified model isolates over-ordering and shortage costs; it is a deterministic classroom illustration, not a forecast or an AI calculation.</p></details>
-      </div>
-      <div class="simulation-work">
-        <div id="demo-static" class="static-example"><h3>A worked round</h3><p>Order 40 units. Demand is 30. Ten units remain and none are unfilled. Cost is $80.</p><p>Discussion: what information would justify ordering more next time?</p><p class="small-note">The interactive three-round version requires JavaScript. This worked example remains available without it.</p></div>
-        <div id="demo-controls" hidden>
-          <div class="case-choice"><label for="case-select">Your teaching context</label><select id="case-select"><option>MBA operations</option><option>Undergraduate analytics</option><option>Executive workshop</option></select></div>
-          <div class="decision-controls"><div><p id="round-label">Round 1 of 3</p><label for="order-quantity">Units to order</label><select id="order-quantity"><option>20</option><option selected>40</option><option>60</option><option>80</option></select></div><button id="reveal-demand" type="button">Reveal demand</button></div>
-          <div class="outcome-table"><table><caption class="sr-only">Your inventory decisions and observed costs</caption><thead><tr><th scope="col">Round</th><th scope="col">Order</th><th scope="col">Demand</th><th scope="col">Left over</th><th scope="col">Unfilled</th><th scope="col">Cost</th></tr></thead><tbody id="round-results"></tbody></table></div>
-          <div class="simulation-total"><span>Total cost</span><output id="total-cost">$0</output><button class="text-button" id="reset-demo" type="button">Reset example</button></div>
-          <p id="decision-summary" class="decision-summary" role="status" aria-live="polite">Choose an order quantity, then reveal demand.</p>
-        </div>
-        <div class="debrief"><h3>The calculation is only the beginning.</h3><p>Use the outcome to discuss uncertainty, the cost of a missed sale and the information a decision-maker needs. You set the learning goal and verify the model.</p><button class="download-case" id="download-case" type="button" hidden>Save teaching example <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 17v4h16v-4"/></svg></button><p class="small-note">Save the selected teaching context and round results as a text file. The example runs locally in your browser.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="context object-section" aria-labelledby="context-title" data-sc-act="flow">
-    <div class="context-copy" data-sc-reveal="left" data-sc-reveal-at="0.03 0.2"><h2 id="context-title">Personal context.<br>Human judgment.</h2><p>A professor's work is more than a prompt. Your methods, students, learning goals, writing preferences and prior decisions shape what a useful result looks like.</p><p>We help you use powerful models and agentic workflows in checkable steps. You choose the question, inspect the evidence and decide what to use.</p></div>
-    <dl class="context-label"><div><dt>Bring</dt><dd>The task, relevant materials and your constraints.</dd></div><div><dt>Build</dt><dd>A guided workflow with outputs you can inspect and correct.</dd></div><div><dt>Keep</dt><dd>Your research taste, responsibility and final judgment.</dd></div></dl>
-  </section>
-
-  <section id="inquiry" class="inquiry object-section" aria-labelledby="inquiry-title" data-sc-act="flow">
-    <div class="inquiry-label"><p class="material-label">Your next project</p><h2 id="inquiry-title">Bring the work<br>you care about.</h2><p id="inquiry-context">Research, teaching or a funding proposal.</p><a class="action" href="../editorial/#project">Create your project brief <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><p class="small-note">Outline your goals and scope with the local brief composer in the editorial direction. No materials are uploaded or requests submitted on this page.</p></div>
-  </section>
-</main>
-<footer><a href="https://www.fashengxu.com/">Back to Fasheng Xu's homepage</a><nav aria-label="Compare page directions"><a href="../editorial/">Editorial direction</a><a href="../">Current page</a></nav><p>Co-Professor is not affiliated with any named journal. Research support is for authors and authorized collaborators, never manuscripts received in confidence for peer review.</p></footer>
-</body>
+<body><p><a href="../">Continue to Co-Professor</a></p></body>
 </html>
