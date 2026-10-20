@@ -24,10 +24,19 @@
     }
   }
 
+  // A section that folds its content (data-fold names the <details>) opens it when a link or
+  // the address points at the section itself.
+  function openFold(el) {
+    var id = el && el.getAttribute ? el.getAttribute("data-fold") : null;
+    var fold = id ? document.getElementById(id) : null;
+    if (fold && fold.tagName === "DETAILS") fold.open = true;
+  }
+
   function revealHash(behavior) {
     var target = byHash(location.hash);
     if (!target) return;
     openTo(target);
+    openFold(target);
     target.scrollIntoView({ block: "start", behavior: behavior });
   }
 
@@ -37,7 +46,7 @@
     var link = ev.target && ev.target.closest ? ev.target.closest('a[href^="#"]') : null;
     if (!link) return;
     var target = byHash(link.getAttribute("href"));
-    if (target) openTo(target);
+    if (target) { openTo(target); openFold(target); }
   });
   window.addEventListener("hashchange", function () { revealHash(reduceMotion ? "auto" : "smooth"); });
 
@@ -53,7 +62,14 @@
     if (phone.addEventListener) phone.addEventListener("change", widen);
     else if (phone.addListener) phone.addListener(widen);
   }
-  if (location.hash) revealHash("auto");
+  // live.css scrolls smoothly; the first jump to an address should land at once
+  // (example.css turns smooth scrolling off while the root carries "ex-jump").
+  if (location.hash) {
+    var root = document.documentElement;
+    root.classList.add("ex-jump");
+    revealHash("auto");
+    root.classList.remove("ex-jump");
+  }
 
   // "Open all steps" and "Open all findings": open everything unless all are open already.
   all("button[data-toggle]").forEach(function (button) {
