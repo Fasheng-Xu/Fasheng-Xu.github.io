@@ -4,10 +4,13 @@
    gone: the few base rules it supplied are in "Base" below, and live.js adds the
    reveals with an IntersectionObserver.
    Fonts: STIX Two Text and Instrument Sans, self-hosted, SIL Open Font License 1.1
-   (fonts/OFL-STIX-Two-Text.txt and fonts/OFL-Instrument-Sans.txt). */
+   (fonts/OFL-STIX-Two-Text.txt and fonts/OFL-Instrument-Sans.txt). JetBrains Mono
+   (fonts/OFL-JetBrains-Mono.txt), used only by example/; this page never sets it, so
+   browsers do not download it here. */
 
 @font-face { font-family: "STIX Two Text"; font-style: normal; font-weight: 400 600; font-display: swap; src: url("fonts/stix-two-text.woff2") format("woff2"); }
 @font-face { font-family: "Instrument Sans"; font-style: normal; font-weight: 400 600; font-display: swap; src: url("fonts/instrument-sans.woff2") format("woff2"); }
+@font-face { font-family: "JetBrains Mono"; font-style: normal; font-weight: 400; font-display: swap; src: url("fonts/jetbrains-mono.woff2") format("woff2"); }
 
 /* Tokens */
 :root {
@@ -78,6 +81,7 @@ h2 { font: 400 clamp(40px, 4.3vw, 64px)/1.07 var(--font-display); letter-spacing
 .chapter-intro { max-width: 64ch; margin-top: 24px; color: var(--ink-soft); font-size: 18px; line-height: 1.7; }
 .text-action { display: inline-block; font-weight: 600; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 7px; }
 .route-link { margin-top: 35px; font-size: 15px; }
+.route-link + .route-link { margin-left: 32px; }
 .figure-label { color: var(--ink-soft); font-size: 12px; letter-spacing: .06em; }
 
 /* Hero */
@@ -181,6 +185,8 @@ details[open] > summary .disclosure-symbol::before { content: "\2212"; }
 .bm-notes b { color: var(--ink); font-weight: 600; }
 .build-run { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 20px clamp(32px, 5vw, 72px); align-items: center; margin-top: 44px; padding-block: 24px; border-block: 1px solid var(--hairline); }
 .build-run-note { max-width: 75ch; margin-top: 10px; color: var(--ink-soft); font-size: 14px; line-height: 1.7; }
+.build-run-more { grid-column: 1 / -1; max-width: 75ch; padding-top: 18px; border-top: 1px solid var(--hairline); color: var(--ink); font-size: 15px; line-height: 1.7; }
+.build-run-more .text-action { margin-left: 6px; }
 .run-stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
 .run-stats div { display: flex; flex-direction: column; padding-left: 16px; border-left: 1px solid var(--hairline); }
 .run-stats dt { color: var(--ink-soft); font-size: var(--fine); line-height: 1.5; }
@@ -291,7 +297,8 @@ h4.sheet-running-head { font-weight: 400; }
 .pricing-list .price-from { font-size: .5em; letter-spacing: 0; vertical-align: .3em; color: var(--ink-soft); }
 .pricing-list .price-quoted { color: var(--ink-soft); }
 .pricing-list .price-unit { margin-top: 6px; color: var(--ink-soft); font-size: 14px; }
-.pricing-list p:last-child { margin-top: 16px; color: var(--ink-soft); font-size: 15px; line-height: 1.7; }
+.pricing-list .price-desc { margin-top: 16px; color: var(--ink-soft); font-size: 15px; line-height: 1.7; }
+.pricing-list .price-link { margin-top: auto; padding-top: 18px; font-size: 15px; }
 .pricing-note { max-width: 70ch; margin-top: 40px; color: var(--ink); font-size: 16px; line-height: 1.6; }
 .pricing-note .text-action { margin-left: 8px; }
 
@@ -493,6 +500,7 @@ h4.sheet-running-head { font-weight: 400; }
   .chapter-intro { margin-top: 20px; font-size: 16px; }
   .research-spread, .teaching-spread { grid-template-columns: minmax(0, 1fr); gap: 36px; margin-top: 36px; }
   .research-prose { padding: 0; }
+  .route-link + .route-link { display: table; margin: 18px 0 0; }
   .research-prose h3, .teaching-prose h3 { font-size: 19px; }
   .research-prose p, .teaching-prose p { font-size: 16px; line-height: 1.7; }
   .report-details { margin-top: 40px; }

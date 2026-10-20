@@ -131,8 +131,23 @@
   var briefDetails = document.getElementById("brief");
   var openBrief = function () { if (briefDetails && "open" in briefDetails) briefDetails.open = true; };
   all('a[href="#brief"]').forEach(function (link) { link.addEventListener("click", openBrief); });
-  if (location.hash === "#brief") openBrief();
-  window.addEventListener("hashchange", function () { if (location.hash === "#brief") openBrief(); });
+
+  // An address that names an accordion, or something inside one, opens it: #brief, and
+  // links such as ../#inside-review from the example report page.
+  var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function openHashTarget(behavior) {
+    var target = null;
+    try {
+      target = location.hash.length > 1 ? document.getElementById(decodeURIComponent(location.hash.slice(1))) : null;
+    } catch (err) { target = null; }
+    if (!target || !target.closest("details")) return;
+    for (var node = target; node; node = node.parentElement) {
+      if (node.tagName === "DETAILS") node.open = true;
+    }
+    target.scrollIntoView({ block: "start", behavior: behavior });
+  }
+  openHashTarget("auto");
+  window.addEventListener("hashchange", function () { openHashTarget(reduceMotion ? "auto" : "smooth"); });
 
   var composer = document.getElementById("composer");
   var briefFallback = document.getElementById("brief-fallback");
