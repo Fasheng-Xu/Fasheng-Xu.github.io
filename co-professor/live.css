@@ -390,7 +390,7 @@ h4.sheet-running-head { font-weight: 400; }
 .contact-lines p { max-width: 50ch; color: var(--ink-soft); font-size: 15px; }
 .contact-lines p + p { margin-top: 22px; }
 .contact-lines .text-action { font-size: 18px; }
-.colophon-bottom { display: grid; grid-column: 1 / -1; grid-template-columns: 1fr 1fr 1fr; gap: 24px; align-items: start; margin-top: 24px; padding-top: 28px; border-top: 1px solid var(--hairline); }
+.colophon-bottom { display: grid; grid-column: 1 / -1; grid-template-columns: 1fr 1fr; gap: 24px 70px; align-items: start; margin-top: 24px; padding-top: 28px; border-top: 1px solid var(--hairline); }
 .colophon-bottom .wordmark { font-size: 22px; }
 .colophon-bottom p, .colophon-bottom nav { color: var(--ink-soft); font-size: 14px; line-height: 1.8; }
 .colophon-bottom nav { display: flex; flex-direction: column; align-items: flex-start; }
@@ -535,7 +535,7 @@ h4.sheet-running-head { font-weight: 400; }
   .colophon { padding-top: 55px; }
   .colophon-inner { grid-template-columns: minmax(0, 1fr); gap: 30px; }
   .colophon-mission { font-size: 40px; }
-  .colophon-bottom { grid-template-columns: 1fr 1fr; gap: 22px; }
+  .colophon-bottom { grid-template-columns: minmax(0, 1fr); gap: 22px; }
   .colophon-bottom .wordmark { grid-column: 1 / -1; }
   .contact-lines p { font-size: 15px; }
   .review-build { margin-top: 56px; }
