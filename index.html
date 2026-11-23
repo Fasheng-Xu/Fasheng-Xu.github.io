@@ -335,8 +335,9 @@
   .lightbox img{max-width:min(780px,94vw);max-height:94vh;border-radius:8px;box-shadow:0 24px 70px rgba(0,0,0,.55)}
   /* ============================ RECOGNITION ============================ */
   .awards{display:grid;grid-template-columns:0.72fr 1.28fr;gap:44px}
+  @media (min-width:801px) and (max-width:1180px){.awards{grid-template-columns:0.62fr 1.38fr;gap:32px}}
   @media (max-width:800px){.awards{grid-template-columns:1fr;gap:34px}}
-  .award-feature{background:var(--panel);border:1px solid var(--line-strong);border-top:2px solid var(--accent);padding:26px 26px 24px;position:relative}
+  .award-feature{align-self:start;background:var(--panel);border:1px solid var(--line-strong);border-top:2px solid var(--accent);padding:26px 26px 24px;position:relative}
   .award-feature h3 a{color:inherit;text-decoration:none}
   .award-feature h3 a:hover{color:var(--accent-ink);text-decoration:underline;text-underline-offset:3px}
   .award-feature .yr{font-family:var(--mono);font-size:12px;color:var(--accent-ink);letter-spacing:.05em}
@@ -347,7 +348,7 @@
   .alist li:first-child{padding-top:0}
   .alist .ay{font-family:var(--mono);font-size:12.5px;color:var(--ink-faint);flex:none;width:44px;font-variant-numeric:tabular-nums}
   .alist .at{font-size:13.5px;color:var(--ink)}
-  .alist .at small{display:block;color:var(--ink-faint);font-size:12.5px;margin-top:2px}
+  .alist .at .org{color:var(--ink-faint)}
 
   /* ============================ TEACHING / ABOUT ============================ */
   .grid2{display:grid;grid-template-columns:1fr 1fr;gap:44px}
@@ -641,9 +642,17 @@
           <li><span class="ay">2026</span><span class="at">Winner, MSOM iFORM SIG Best Paper Award Competition</span></li>
           <li><span class="ay">2026</span><span class="at">Finalist, Management Science Best Paper Award in Operations Management</span></li>
           <li><span class="ay">2026</span><span class="at">M&amp;SOM Meritorious Service Award</span></li>
-          <li><span class="ay">2025</span><span class="at">Best Paper Award, Runner-up<small>UConn School of Business</small></span></li>
-          <li><span class="ay">2022</span><span class="at">Guttag Junior Faculty Award<small>Whitman School of Management, Syracuse University</small></span></li>
+          <li><span class="ay">2025</span><span class="at">Best Paper Award, Runner-up <span class="org">(UConn School of Business)</span></span></li>
+          <li><span class="ay">2025</span><span class="at">M&amp;SOM Meritorious Service Award</span></li>
+          <li><span class="ay">2024</span><span class="at">M&amp;SOM Meritorious Service Award</span></li>
+          <li><span class="ay">2023</span><span class="at">Management Science Meritorious Service Award</span></li>
+          <li><span class="ay">2023</span><span class="at">M&amp;SOM Meritorious Service Award</span></li>
           <li><span class="ay">2022</span><span class="at">Finalist, MSOM iFORM SIG Best Paper Award Competition</span></li>
+          <li><span class="ay">2022</span><span class="at">Guttag Junior Faculty Award <span class="org">(Whitman School of Management, Syracuse University)</span></span></li>
+          <li><span class="ay">2022</span><span class="at">Management Science Meritorious Service Award</span></li>
+          <li><span class="ay">2022</span><span class="at">M&amp;SOM Meritorious Service Award</span></li>
+          <li><span class="ay">2022</span><span class="at">Honorable Mention, POMS College of SCM Best Student Paper Competition</span></li>
+          <li><span class="ay">2021</span><span class="at">Finalist, INFORMS Section on Finance Best Student Paper Competition</span></li>
           <li><span class="ay">2021</span><span class="at">Finalist, INFORMS Junior Faculty Interest Group Paper Competition</span></li>
           <li><span class="ay">2020</span><span class="at">Winner, POMS PITM Best Student Paper Competition</span></li>
         </ul>
