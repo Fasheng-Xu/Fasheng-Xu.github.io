@@ -334,8 +334,7 @@
   .lightbox.open{display:flex}
   .lightbox img{max-width:min(780px,94vw);max-height:94vh;border-radius:8px;box-shadow:0 24px 70px rgba(0,0,0,.55)}
   /* ============================ RECOGNITION ============================ */
-  .awards{display:grid;grid-template-columns:0.72fr 1.28fr;gap:44px}
-  @media (min-width:801px) and (max-width:1180px){.awards{grid-template-columns:0.62fr 1.38fr;gap:32px}}
+  .awards{display:block}
   @media (max-width:800px){.awards{grid-template-columns:1fr;gap:34px}}
   .award-feature{background:var(--panel);border:1px solid var(--line-strong);border-top:2px solid var(--accent);padding:26px 26px 24px;position:relative}
   .award-feature h3 a{color:inherit;text-decoration:none}
@@ -347,8 +346,14 @@
   .alist li{display:flex;gap:16px;padding:13px 2px;border-bottom:1px solid var(--line);align-items:baseline}
   .alist li:first-child{padding-top:0}
   .alist .ay{font-family:var(--mono);font-size:12.5px;color:var(--ink-faint);flex:none;width:44px;font-variant-numeric:tabular-nums}
-  .alist .at{font-size:13.5px;color:var(--ink)}
+  .alist .at{font-size:14.5px;color:var(--ink)}
   .alist .at .org{color:var(--ink-faint)}
+  .alist li.hl{background:color-mix(in srgb,var(--accent) 7%,transparent);border-left:3px solid var(--accent);padding:14px 14px 14px 14px;margin:4px 0 4px -15px}
+  .alist li.hl .at{font-weight:600}
+  .alist li.hl .at a{color:var(--accent-ink);text-decoration:none}
+  .alist li.hl .at a:hover{text-decoration:underline}
+  .alist li.hl .ay{color:var(--accent-ink);font-weight:600}
+  .alist li.hl .desc{display:block;font-weight:400;font-size:13px;color:var(--ink-soft);margin-top:4px}
   .alist-h{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);font-weight:600;margin:0 0 6px}
   .alist-h--next{margin-top:28px}
   .award-side,.award-lists{align-self:start}
@@ -637,32 +642,25 @@
         </div>
       </div>
       <div class="awards reveal">
-        <div class="award-side">
-          <div class="award-feature">
-            <div class="yr">2025 · Production and Operations Management Society</div>
-            <h3><a href="https://www.poms.org/pomsocietyawards/earlycareerresearchaward" target="_blank" rel="noopener">Chelliah Sriskandarajah Early Career Research Accomplishments Award</a></h3>
-            <p>The most prestigious early-career research award in the operations management community, presented annually to a single early-career scholar worldwide in recognition of exceptional research accomplishments and scholarly impact.</p>
-          </div>
-          <div class="alist-h alist-h--next">Meritorious service awards</div>
-          <ul class="alist alist--compact">
-            <li><span class="at">M&amp;SOM <span class="org">(2022, 2023, 2024, 2025, 2026)</span></span></li>
-            <li><span class="at">Management Science <span class="org">(2022, 2023)</span></span></li>
-          </ul>
-        </div>
-        <div class="award-lists">
-          <div class="alist-h">Research awards</div>
-          <ul class="alist">
-            <li><span class="ay">2026</span><span class="at">Winner, MSOM iFORM SIG Best Paper Award Competition</span></li>
-            <li><span class="ay">2026</span><span class="at">Finalist, Management Science Best Paper in OM Award</span></li>
-            <li><span class="ay">2025</span><span class="at">Best Paper Award, Runner-up <span class="org">(UConn School of Business)</span></span></li>
-            <li><span class="ay">2022</span><span class="at">Finalist, MSOM iFORM SIG Best Paper Award Competition</span></li>
-            <li><span class="ay">2022</span><span class="at">Guttag Junior Faculty Award <span class="org">(Whitman School of Management, Syracuse University)</span></span></li>
-            <li><span class="ay">2022</span><span class="at">Honorable Mention, POMS College of SCM Best Student Paper Competition</span></li>
-            <li><span class="ay">2021</span><span class="at">Finalist, INFORMS Section on Finance Best Student Paper Competition</span></li>
-            <li><span class="ay">2021</span><span class="at">Finalist, INFORMS Junior Faculty Interest Group Paper Competition</span></li>
-            <li><span class="ay">2020</span><span class="at">Winner, POMS PITM Best Student Paper Competition</span></li>
-          </ul>
-        </div>
+        <ul class="alist">
+          <li><span class="ay">2026</span><span class="at">Winner, MSOM iFORM SIG Best Paper Award Competition</span></li>
+          <li><span class="ay">2026</span><span class="at">Finalist, Management Science Best Paper in OM Award</span></li>
+          <li><span class="ay">2026</span><span class="at">M&amp;SOM Meritorious Service Award</span></li>
+          <li class="hl"><span class="ay">2025</span><span class="at"><a href="https://www.poms.org/pomsocietyawards/earlycareerresearchaward" target="_blank" rel="noopener">Winner, Chelliah Sriskandarajah Early Career Research Accomplishments Award</a> <span class="org">(POMS)</span><span class="desc">The most prestigious early-career research award in operations management, given each year to one scholar worldwide.</span></span></li>
+          <li><span class="ay">2025</span><span class="at">Best Paper Award, Runner-up <span class="org">(UConn School of Business)</span></span></li>
+          <li><span class="ay">2025</span><span class="at">M&amp;SOM Meritorious Service Award</span></li>
+          <li><span class="ay">2024</span><span class="at">M&amp;SOM Meritorious Service Award</span></li>
+          <li><span class="ay">2023</span><span class="at">Management Science Meritorious Service Award</span></li>
+          <li><span class="ay">2023</span><span class="at">M&amp;SOM Meritorious Service Award</span></li>
+          <li><span class="ay">2022</span><span class="at">Finalist, MSOM iFORM SIG Best Paper Award Competition</span></li>
+          <li><span class="ay">2022</span><span class="at">Guttag Junior Faculty Award <span class="org">(Whitman School of Management, Syracuse University)</span></span></li>
+          <li><span class="ay">2022</span><span class="at">Management Science Meritorious Service Award</span></li>
+          <li><span class="ay">2022</span><span class="at">M&amp;SOM Meritorious Service Award</span></li>
+          <li><span class="ay">2022</span><span class="at">Honorable Mention, POMS College of SCM Best Student Paper Competition</span></li>
+          <li><span class="ay">2021</span><span class="at">Finalist, INFORMS Section on Finance Best Student Paper Competition</span></li>
+          <li><span class="ay">2021</span><span class="at">Finalist, INFORMS Junior Faculty Interest Group Paper Competition</span></li>
+          <li><span class="ay">2020</span><span class="at">Winner, POMS PITM Best Student Paper Competition</span></li>
+        </ul>
       </div>
     </div>
   </section>
