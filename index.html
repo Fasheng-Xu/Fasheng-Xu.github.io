@@ -349,9 +349,11 @@
   .alist .ay{font-family:var(--mono);font-size:12.5px;color:var(--ink-faint);flex:none;width:44px;font-variant-numeric:tabular-nums}
   .alist .at{font-size:13.5px;color:var(--ink)}
   .alist .at .org{color:var(--ink-faint)}
-  .alist-h{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);font-weight:600;margin:0 0 6px}
+  .alist-h{font-family:var(--serif);font-size:17px;line-height:1.2;color:var(--accent-ink);font-weight:600;margin:0 0 8px}
   .alist-h--next{margin-top:28px}
-  .award-side,.award-lists{align-self:start}
+  .award-side,.award-lists{display:flex;flex-direction:column}
+  .award-side .award-feature{flex:1 1 auto}
+  .award-lists .alist{flex:1 1 auto;justify-content:space-between}
   .alist--compact li{padding:11px 2px}
 
   /* ============================ TEACHING / ABOUT ============================ */
@@ -632,8 +634,7 @@
       <div class="sec-head reveal">
         <div class="k">
           <div class="eyebrow"><span class="sec-num">05 / </span>Recognition</div>
-          <h2>Honors &amp; awards</h2>
-          <p>Selected recognition for research and service across the operations, information systems, and management-science communities.</p>
+          <h2>Honors &amp; Awards</h2>
         </div>
       </div>
       <div class="awards reveal">
@@ -643,14 +644,14 @@
             <h3><a href="https://www.poms.org/pomsocietyawards/earlycareerresearchaward" target="_blank" rel="noopener">Chelliah Sriskandarajah Early Career Research Accomplishments Award</a></h3>
             <p>The most prestigious early-career research award in the operations management community, presented annually to a single early-career scholar worldwide in recognition of exceptional research accomplishments and scholarly impact.</p>
           </div>
-          <div class="alist-h alist-h--next">Meritorious service awards</div>
+          <div class="alist-h alist-h--next">Meritorious Service Awards</div>
           <ul class="alist alist--compact">
             <li><span class="at">M&amp;SOM <span class="org">(2022, 2023, 2024, 2025, 2026)</span></span></li>
             <li><span class="at">Management Science <span class="org">(2022, 2023)</span></span></li>
           </ul>
         </div>
         <div class="award-lists">
-          <div class="alist-h">Research awards</div>
+          <div class="alist-h">Research Awards</div>
           <ul class="alist">
             <li><span class="ay">2026</span><span class="at">Winner, MSOM iFORM SIG Best Paper Award Competition</span></li>
             <li><span class="ay">2026</span><span class="at">Finalist, Management Science Best Paper in OM Award</span></li>
