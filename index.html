@@ -334,8 +334,7 @@
   .lightbox.open{display:flex}
   .lightbox img{max-width:min(780px,94vw);max-height:94vh;border-radius:8px;box-shadow:0 24px 70px rgba(0,0,0,.55)}
   /* ============================ RECOGNITION ============================ */
-  .awards{display:grid;grid-template-columns:0.72fr 1.28fr;gap:44px}
-  @media (min-width:801px) and (max-width:1180px){.awards{grid-template-columns:0.62fr 1.38fr;gap:32px}}
+  .awards{display:block}
   @media (max-width:800px){.awards{grid-template-columns:1fr;gap:34px}}
   .award-feature{background:var(--panel);border:1px solid var(--line-strong);border-top:2px solid var(--accent);padding:26px 26px 24px;position:relative}
   .award-feature h3 a{color:inherit;text-decoration:none}
@@ -347,13 +346,16 @@
   .alist li{display:flex;gap:16px;padding:13px 2px;border-bottom:1px solid var(--line);align-items:baseline}
   .alist li:first-child{padding-top:0}
   .alist .ay{font-family:var(--mono);font-size:12.5px;color:var(--ink-faint);flex:none;width:44px;font-variant-numeric:tabular-nums}
-  .alist .at{font-size:13.5px;color:var(--ink)}
+  .alist .at{font-size:14.5px;color:var(--ink)}
   .alist .at .org{color:var(--ink-faint)}
   .alist-h{font-family:var(--serif);font-size:17px;line-height:1.2;color:var(--accent-ink);font-weight:600;margin:0 0 8px}
   .alist-h--next{margin-top:28px}
-  .award-side,.award-lists{display:flex;flex-direction:column}
-  .award-side .award-feature{flex:1 1 auto}
-  .award-lists .alist{flex:1 1 auto;justify-content:space-between}
+  .award-side{margin-bottom:clamp(22px,3vw,30px)}
+  .award-side .award-feature{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);column-gap:44px;align-items:center}
+  .award-side .award-feature .yr{grid-column:1;grid-row:1}
+  .award-side .award-feature h3{grid-column:1;grid-row:2;margin-bottom:0}
+  .award-side .award-feature p{grid-column:2;grid-row:1/3;margin:0}
+  @media (max-width:800px){.award-side .award-feature{grid-template-columns:1fr}.award-side .award-feature p{grid-column:1;grid-row:3;margin-top:10px}}
   .alist--compact li{padding:11px 2px}
 
   /* ============================ TEACHING / ABOUT ============================ */
@@ -644,20 +646,21 @@
             <h3><a href="https://www.poms.org/pomsocietyawards/earlycareerresearchaward" target="_blank" rel="noopener">Chelliah Sriskandarajah Early Career Research Accomplishments Award</a></h3>
             <p>The most prestigious early-career research award in the operations management community, presented annually to a single early-career scholar worldwide in recognition of exceptional research accomplishments and scholarly impact.</p>
           </div>
-          <div class="alist-h alist-h--next">Meritorious Service Awards</div>
-          <ul class="alist alist--compact">
-            <li><span class="at">M&amp;SOM <span class="org">(2022, 2023, 2024, 2025, 2026)</span></span></li>
-            <li><span class="at">Management Science <span class="org">(2022, 2023)</span></span></li>
-          </ul>
         </div>
         <div class="award-lists">
-          <div class="alist-h">Research Awards</div>
           <ul class="alist">
             <li><span class="ay">2026</span><span class="at">Winner, MSOM iFORM SIG Best Paper Award Competition</span></li>
             <li><span class="ay">2026</span><span class="at">Finalist, Management Science Best Paper in OM Award</span></li>
+            <li><span class="ay">2026</span><span class="at">M&amp;SOM Meritorious Service Award</span></li>
             <li><span class="ay">2025</span><span class="at">Best Paper Award, Runner-up <span class="org">(UConn School of Business)</span></span></li>
+            <li><span class="ay">2025</span><span class="at">M&amp;SOM Meritorious Service Award</span></li>
+            <li><span class="ay">2024</span><span class="at">M&amp;SOM Meritorious Service Award</span></li>
+            <li><span class="ay">2023</span><span class="at">Management Science Meritorious Service Award</span></li>
+            <li><span class="ay">2023</span><span class="at">M&amp;SOM Meritorious Service Award</span></li>
             <li><span class="ay">2022</span><span class="at">Finalist, MSOM iFORM SIG Best Paper Award Competition</span></li>
             <li><span class="ay">2022</span><span class="at">Guttag Junior Faculty Award <span class="org">(Whitman School of Management, Syracuse University)</span></span></li>
+            <li><span class="ay">2022</span><span class="at">Management Science Meritorious Service Award</span></li>
+            <li><span class="ay">2022</span><span class="at">M&amp;SOM Meritorious Service Award</span></li>
             <li><span class="ay">2022</span><span class="at">Honorable Mention, POMS College of SCM Best Student Paper Competition</span></li>
             <li><span class="ay">2021</span><span class="at">Finalist, INFORMS Section on Finance Best Student Paper Competition</span></li>
             <li><span class="ay">2021</span><span class="at">Finalist, INFORMS Junior Faculty Interest Group Paper Competition</span></li>
